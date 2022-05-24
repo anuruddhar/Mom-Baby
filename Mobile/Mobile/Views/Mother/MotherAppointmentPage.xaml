@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<base:CustomContentPage
+   xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:base="clr-namespace:Mobile.Views.Base" 
+             xmlns:i18n="clr-namespace:Mobile;assembly=Mobile"
+             xmlns:controls="clr-namespace:Mobile.Core.Controls;assembly=Mobile.Core"
+             xmlns:behavior="clr-namespace:Mobile.Core.Behaviors;assembly=Mobile.Core"
+    xmlns:templates="clr-namespace:Mobile.Views.Templates"
+    x:Class="Mobile.Views.MotherAppointmentPage"
+             Title="{Binding Title}">
+    <base:CustomContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="ValueLabelStyle">
+                <Setter Property="FontFamily" Value="{StaticResource BoldFont}"/>
+                <Setter Property="FontSize" Value="{StaticResource LargeFontUnit}"/>
+                <Setter Property="TextColor" Value ="{StaticResource HighlightedFontColor}"/>
+                <Setter Property="HorizontalOptions" Value ="End"/>
+                <Setter Property="VerticalOptions" Value ="Center"/>
+            </Style>
+        </ResourceDictionary>
+    </base:CustomContentPage.Resources>
+
+    <AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutFlags="All"
+                 AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                 Padding="0,0,0,0"
+                 Spacing="0"
+                 BackgroundColor="{StaticResource ListViewBackgroundColor}">
+            <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags ="All">
+                <Frame  VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Style="{StaticResource FrameStyle}">
+                    <StackLayout Style="{StaticResource PanelContainerStyle}">
+
+                        <ContentView Style="{StaticResource HeaderLabelStyle}">
+                            <Label Text="Mother Health Record" Style="{StaticResource TextLabelStyle}"/>
+                        </ContentView>
+
+                        <StackLayout Style="{StaticResource ItemContainerStyle}">
+                            <Label Text="{i18n:Translate LBL_DATA_010}" Style="{StaticResource FormLabelStyle}"/>
+                            <controls:ExtendedEntry Placeholder="" 
+                                                    ErrorText="{Binding Model.Mother.NotValidMessageError}"
+                                                    Text="{Binding Model.Mother.StringVal}"
+                                                    IsBorderErrorVisible="{Binding Model.Mother.IsNotValid, Mode=TwoWay}"
+                                                    IsKeyBoardDisabled ="True">
+                                <controls:ExtendedEntry.Behaviors>
+                                    <behavior:EmptyEntryValidatorBehavior />
+                                    <behavior:IsFocusedEntryBehavior Command="{Binding MotherEntryCommand}" />
+                                </controls:ExtendedEntry.Behaviors>
+                            </controls:ExtendedEntry>
+                        </StackLayout>
+
+                        <StackLayout Style="{StaticResource ItemContainerStyle}">
+                            <Label Text="{i18n:Translate LBL_DATA_011}" Style="{StaticResource FormLabelStyle}"/>
+                            <controls:ExtendedEntry Placeholder="" 
+                                                    ErrorText="{Binding Model.HealthCondition.NotValidMessageError}"
+                                                    Text="{Binding Model.HealthCondition.StringVal}"
+                                                    IsBorderErrorVisible="{Binding Model.HealthCondition.IsNotValid, Mode=TwoWay}">
+                                <controls:ExtendedEntry.Behaviors>
+                                    <behavior:EmptyEntryValidatorBehavior />
+                                    <behavior:EntryLengthValidatorBehavior MaxLength="30" />
+                                </controls:ExtendedEntry.Behaviors>
+                            </controls:ExtendedEntry>
+                        </StackLayout>
+
+                        <StackLayout Style="{StaticResource ItemContainerStyle}">
+                            <Label Text="{i18n:Translate LBL_DATA_012}" Style="{StaticResource FormLabelStyle}"/>
+                            <controls:ExtendedEntry Placeholder="" 
+                                                    ErrorText="{Binding Model.Weight.NotValidMessageError}"
+                                                    Text="{Binding Model.Weight.StringVal}"
+                                                    IsBorderErrorVisible="{Binding Model.Weight.IsNotValid, Mode=TwoWay}">
+                                <controls:ExtendedEntry.Behaviors>
+                                    <behavior:EmptyEntryValidatorBehavior />
+                                    <behavior:EntryLengthValidatorBehavior MaxLength="30" />
+                                </controls:ExtendedEntry.Behaviors>
+                            </controls:ExtendedEntry>
+                        </StackLayout>
+
+                        <StackLayout Style="{StaticResource ItemContainerStyle}">
+                            <Label Text="{i18n:Translate LBL_DATA_013}" Style="{StaticResource FormLabelStyle}"/>
+                            <controls:ExtendedEntry Placeholder="" 
+                                                    ErrorText="{Binding Model.BloodPressure.NotValidMessageError}"
+                                                    Text="{Binding Model.BloodPressure.StringVal}"
+                                                    IsBorderErrorVisible="{Binding Model.BloodPressure.IsNotValid, Mode=TwoWay}"
+                                                    IsKeyBoardDisabled ="True">
+                                <controls:ExtendedEntry.Behaviors>
+                                    <behavior:EmptyEntryValidatorBehavior />
+                                    <behavior:EntryLengthValidatorBehavior MaxLength="30" />
+                                </controls:ExtendedEntry.Behaviors>
+                            </controls:ExtendedEntry>
+                        </StackLayout>
+
+                        <StackLayout Style="{StaticResource ItemContainerStyle}">
+                            <Label Text="{i18n:Translate LBL_DATA_014}" Style="{StaticResource FormLabelStyle}"/>
+                            <controls:ExtendedEntry Placeholder="" 
+                                                    ErrorText="{Binding Model.GlucouseLevel.NotValidMessageError}"
+                                                    Text="{Binding Model.GlucouseLevel.StringVal}"
+                                                    IsBorderErrorVisible="{Binding Model.GlucouseLevel.IsNotValid, Mode=TwoWay}"
+                                                    IsKeyBoardDisabled ="True">
+                                <controls:ExtendedEntry.Behaviors>
+                                    <behavior:EmptyEntryValidatorBehavior />
+                                    <behavior:EntryLengthValidatorBehavior MaxLength="30" />
+                                </controls:ExtendedEntry.Behaviors>
+                            </controls:ExtendedEntry>
+                        </StackLayout>
+
+                        <StackLayout Style="{StaticResource ItemContainerStyle}">
+                            <Label Text="{i18n:Translate LBL_DATA_015}" Style="{StaticResource FormLabelStyle}"/>
+                            <controls:ExtendedEntry Placeholder="" 
+                                                    ErrorText="{Binding Model.Vaccine.NotValidMessageError}"
+                                                    Text="{Binding Model.Vaccine.StringVal}"
+                                                    IsBorderErrorVisible="{Binding Model.Vaccine.IsNotValid, Mode=TwoWay}"
+                                                    IsKeyBoardDisabled ="True">
+                                <controls:ExtendedEntry.Behaviors>
+                                    <behavior:EmptyEntryValidatorBehavior />
+                                    <behavior:EntryLengthValidatorBehavior MaxLength="30" />
+                                </controls:ExtendedEntry.Behaviors>
+                            </controls:ExtendedEntry>
+                        </StackLayout>
+
+                        <StackLayout Style="{StaticResource ItemContainerStyle}">
+                            <Label Text="{i18n:Translate LBL_DATA_016}" Style="{StaticResource FormLabelStyle}"/>
+                            <controls:ExtendedEntry Placeholder="" 
+                                                    ErrorText="{Binding Model.Instruction.NotValidMessageError}"
+                                                    Text="{Binding Model.Instruction.StringVal}"
+                                                    IsBorderErrorVisible="{Binding Model.Instruction.IsNotValid, Mode=TwoWay}"
+                                                    IsKeyBoardDisabled ="True">
+                                <controls:ExtendedEntry.Behaviors>
+                                    <behavior:EmptyEntryValidatorBehavior />
+                                    <behavior:EntryLengthValidatorBehavior MaxLength="30" />
+                                </controls:ExtendedEntry.Behaviors>
+                            </controls:ExtendedEntry>
+                        </StackLayout>
+
+                        <StackLayout Style="{StaticResource ItemContainerStyle}">
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout Orientation="Vertical"
+                                     Spacing="10"
+                                     HorizontalOptions="FillAndExpand">
+                                    <Label Text="{i18n:Translate LBL_DATA_009}" Style="{StaticResource FormLabelStyle}"/>
+                                    <controls:CustomDatePicker Date="{Binding NextAppointmentDate}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical"
+                                     Spacing="10"
+                                     HorizontalOptions="FillAndExpand">
+                                    <Label Text=""/>
+                                    <controls:CustomTimePicker/>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+
+
+                    </StackLayout>
+                </Frame>
+            </ScrollView>
+        </StackLayout>
+        <templates:FloatingButton />
+    </AbsoluteLayout>
+
+</base:CustomContentPage>            

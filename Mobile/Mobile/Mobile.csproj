@@ -1,0 +1,363 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <UseShortFileNames>True</UseShortFileNames>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Platforms>AnyCPU;x86</Platforms>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <Configurations>Debug;Release;</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Helpers\CommonFunctions.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Image\img-applogo-inverse.png" />
+    <None Remove="Assets\Image\img-applogo.png" />
+    <None Remove="Assets\Image\img-baby.PNG" />
+    <None Remove="Assets\Image\img-english.PNG" />
+    <None Remove="Assets\Image\img-family.PNG" />
+    <None Remove="Assets\Image\img-mainscreen-banner.png" />
+    <None Remove="Assets\Image\img-mother.PNG" />
+    <None Remove="Assets\Image\img-new-baby.PNG" />
+    <None Remove="Assets\Image\img-new-mother.PNG" />
+    <None Remove="Assets\Image\img-sinhala.PNG" />
+    <None Remove="Assets\Image\img-tamil.PNG" />
+    <None Remove="Assets\Sounds\beep.wav" />
+    <None Remove="Assets\Svg\delete_img-baby.svg" />
+    <None Remove="Assets\Svg\delete_img-mom-baby.svg" />
+    <None Remove="Assets\Svg\img-alert-denied.svg" />
+    <None Remove="Assets\Svg\img-alert-error.svg" />
+    <None Remove="Assets\Svg\img-alert-message.svg" />
+    <None Remove="Assets\Svg\img-alert-question.svg" />
+    <None Remove="Assets\Svg\img-alert-success.svg" />
+    <None Remove="Assets\Svg\img-alert-warning.svg" />
+    <None Remove="Assets\Svg\img-applogo.svg" />
+    <None Remove="Assets\Svg\img-baby.svg" />
+    <None Remove="Assets\Svg\img-banner-analysis-quantity.svg" />
+    <None Remove="Assets\Svg\img-banner-customer-delivery.svg" />
+    <None Remove="Assets\Svg\img-banner-delivery-note.svg" />
+    <None Remove="Assets\Svg\img-banner-delivery-summary.svg" />
+    <None Remove="Assets\Svg\img-barcode-content-bg.svg" />
+    <None Remove="Assets\Svg\img-barcode-scanner.svg" />
+    <None Remove="Assets\Svg\img-com-barcode-scanner.svg" />
+    <None Remove="Assets\Svg\img-list-assign-checked.svg" />
+    <None Remove="Assets\Svg\img-list-assign-progress.svg" />
+    <None Remove="Assets\Svg\img-list-assign-valid.svg" />
+    <None Remove="Assets\Svg\img-list-barcode.svg" />
+    <None Remove="Assets\Svg\img-list-delete-icon.svg" />
+    <None Remove="Assets\Svg\img-list-download.svg" />
+    <None Remove="Assets\Svg\img-list-navigate-arrow.svg" />
+    <None Remove="Assets\Svg\img-list-new-item.svg" />
+    <None Remove="Assets\Svg\img-list-new.svg" />
+    <None Remove="Assets\Svg\img-list-no-item.svg" />
+    <None Remove="Assets\Svg\img-list-not-rejected.svg" />
+    <None Remove="Assets\Svg\img-list-notification-sync.svg" />
+    <None Remove="Assets\Svg\img-list-old-item.svg" />
+    <None Remove="Assets\Svg\img-list-opened.svg" />
+    <None Remove="Assets\Svg\img-list-raw-material.svg" />
+    <None Remove="Assets\Svg\img-list-rejected.svg" />
+    <None Remove="Assets\Svg\img-list-status-completed.svg" />
+    <None Remove="Assets\Svg\img-list-status-fresh.svg" />
+    <None Remove="Assets\Svg\img-list-status-inprogress.svg" />
+    <None Remove="Assets\Svg\img-list-value-edit.svg" />
+    <None Remove="Assets\Svg\img-list-wip.svg" />
+    <None Remove="Assets\Svg\img-main-menu.svg" />
+    <None Remove="Assets\Svg\img-menu-about.svg" />
+    <None Remove="Assets\Svg\img-menu-bluetooth.svg" />
+    <None Remove="Assets\Svg\img-menu-connections.svg" />
+    <None Remove="Assets\Svg\img-menu-delete-db.svg" />
+    <None Remove="Assets\Svg\img-menu-delivery.svg" />
+    <None Remove="Assets\Svg\img-menu-distribution-delivery.svg" />
+    <None Remove="Assets\Svg\img-menu-distribution-pickup.svg" />
+    <None Remove="Assets\Svg\img-menu-distribution.svg" />
+    <None Remove="Assets\Svg\img-menu-download.svg" />
+    <None Remove="Assets\Svg\img-menu-language.svg" />
+    <None Remove="Assets\Svg\img-menu-local-db.svg" />
+    <None Remove="Assets\Svg\img-menu-logout.svg" />
+    <None Remove="Assets\Svg\img-menu-master-data.svg" />
+    <None Remove="Assets\Svg\img-menu-pdt-no.svg" />
+    <None Remove="Assets\Svg\img-menu-preparation.svg" />
+    <None Remove="Assets\Svg\img-menu-print-end.svg" />
+    <None Remove="Assets\Svg\img-menu-print-item.svg" />
+    <None Remove="Assets\Svg\img-menu-printer.svg" />
+    <None Remove="Assets\Svg\img-menu-production.svg" />
+    <None Remove="Assets\Svg\img-menu-replace-db.svg" />
+    <None Remove="Assets\Svg\img-menu-report.svg" />
+    <None Remove="Assets\Svg\img-menu-return.svg" />
+    <None Remove="Assets\Svg\img-menu-share-db.svg" />
+    <None Remove="Assets\Svg\img-menu-sorting.svg" />
+    <None Remove="Assets\Svg\img-menu-toolbar-back-order.svg" />
+    <None Remove="Assets\Svg\img-menu-toolbar-cancel-order.svg" />
+    <None Remove="Assets\Svg\img-menu-toolbar-delete-order.svg" />
+    <None Remove="Assets\Svg\img-menu-toolbar-refresh.svg" />
+    <None Remove="Assets\Svg\img-menu-toolbar-remark.svg" />
+    <None Remove="Assets\Svg\img-menu-toolbar-report-list.svg" />
+    <None Remove="Assets\Svg\img-menu-toolbar-save-report.svg" />
+    <None Remove="Assets\Svg\img-menu-toolbar-scan-barcode.svg" />
+    <None Remove="Assets\Svg\img-menu-toolbar-scanner-blutooth.svg" />
+    <None Remove="Assets\Svg\img-menu-toolbar-scanner-camera.svg" />
+    <None Remove="Assets\Svg\img-menu-toolbar-sync.svg" />
+    <None Remove="Assets\Svg\img-menu-transaction-data.svg" />
+    <None Remove="Assets\Svg\img-menu-unload-products.svg" />
+    <None Remove="Assets\Svg\img-menu-upload.svg" />
+    <None Remove="Assets\Svg\img-mom-baby.svg" />
+    <None Remove="Assets\Svg\img-mom.svg" />
+    <None Remove="Assets\Svg\img-progress-indicator.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="{d37e2a3e-8545-3a39-9f4f-31827c9124ab}">
+      <Guid>d37e2a3e-8545-3a39-9f4f-31827c9124ab</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\Image\img-applogo-inverse.png" />
+    <EmbeddedResource Include="Assets\Image\img-applogo.png" />
+    <EmbeddedResource Include="Assets\Image\img-baby.PNG" />
+    <EmbeddedResource Include="Assets\Image\img-english.PNG" />
+    <EmbeddedResource Include="Assets\Image\img-family.PNG" />
+    <EmbeddedResource Include="Assets\Image\img-mainscreen-banner.png" />
+    <EmbeddedResource Include="Assets\Image\img-mother.PNG" />
+    <EmbeddedResource Include="Assets\Image\img-new-baby.PNG" />
+    <EmbeddedResource Include="Assets\Image\img-new-mother.PNG" />
+    <EmbeddedResource Include="Assets\Image\img-sinhala.PNG" />
+    <EmbeddedResource Include="Assets\Image\img-tamil.PNG" />
+    <EmbeddedResource Include="Assets\Sounds\beep.wav" />
+    <EmbeddedResource Include="Assets\Svg\delete_img-baby.svg" />
+    <EmbeddedResource Include="Assets\Svg\delete_img-mom-baby.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-alert-denied.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-alert-error.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-alert-message.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-alert-question.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-alert-success.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-alert-warning.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-applogo.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-baby.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-banner-analysis-quantity.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-banner-customer-delivery.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-banner-delivery-note.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-banner-delivery-summary.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-barcode-content-bg.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-barcode-scanner.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-com-barcode-scanner.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-list-assign-checked.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-list-assign-progress.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-list-assign-valid.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-list-barcode.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-list-delete-icon.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-list-download.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-list-navigate-arrow.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-list-new.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-list-new-item.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-list-no-item.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-list-not-rejected.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-list-notification-sync.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-list-old-item.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-list-opened.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-list-raw-material.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-list-rejected.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-list-status-completed.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-list-status-fresh.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-list-status-inprogress.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-list-value-edit.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-list-wip.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-main-menu.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-about.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-bluetooth.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-connections.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-delete-db.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-delivery.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-download.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-print-item.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-print-end.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-report.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-return.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-upload.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-distribution-delivery.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-distribution-pickup.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-distribution.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-language.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-local-db.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-logout.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-master-data.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-pdt-no.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-preparation.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-printer.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-production.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-replace-db.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-share-db.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-sorting.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-toolbar-back-order.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-toolbar-cancel-order.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-toolbar-delete-order.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-toolbar-refresh.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-toolbar-remark.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-toolbar-report-list.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-toolbar-save-report.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-toolbar-scan-barcode.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-toolbar-scanner-blutooth.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-toolbar-scanner-camera.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-toolbar-sync.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-transaction-data.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-menu-unload-products.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-mom-baby.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-mom.svg" />
+    <EmbeddedResource Include="Assets\Svg\img-progress-indicator.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Acr.DeviceInfo" Version="6.5.0" />
+    <PackageReference Include="Acr.UserDialogs" Version="7.1.0.446" />
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="3.1.3" />
+    <PackageReference Include="Fody" Version="6.2.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="FuryTechs.FloatingActionButton" Version="0.0.15" />
+    <PackageReference Include="Honeywell.BarcodeReader" Version="1.32.7.10" />
+    <PackageReference Include="LeoJHarris.XForms.Plugin.EnhancedEntry" Version="1.0.6" />
+    <PackageReference Include="LinkOS_Xamarin_SDK" Version="1.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="3.1.7" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client.Core" Version="3.1.7" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.MessagePack" Version="3.1.7" />
+    <PackageReference Include="Mono.Data.Sqlite.Portable" Version="1.0.3.5" />
+    <PackageReference Include="PCLCrypto" Version="2.0.147" />
+    <PackageReference Include="PdfSharpCore" Version="1.2.5" />
+    <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
+    <PackageReference Include="Prism.Plugin.Popups" Version="7.2.0.1046" />
+    <PackageReference Include="PropertyChanged.Fody" Version="3.2.8" />
+    <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
+    <PackageReference Include="Scandit.BarcodePicker.Unified" Version="5.16.0.10" />
+    <PackageReference Include="SegmentedControl.FormsPlugin" Version="2.0.1" />
+    <PackageReference Include="SlideOverKit" Version="2.1.6.2" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
+    <PackageReference Include="SQLiteNetExtensions" Version="2.1.0" />
+    <PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.0.3" />
+    <PackageReference Include="SQLitePCLRaw.core" Version="2.0.3" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
+    <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
+    <PackageReference Include="Xam.Plugin.DeviceInfo" Version="4.1.1" />
+    <PackageReference Include="Xam.Plugin.Geolocator" Version="4.5.0.6" />
+    <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.4.0" />
+    <PackageReference Include="Xam.Plugins.Settings" Version="4.0.0.10-beta" />
+    <PackageReference Include="Xamarin.Controls.SignaturePad.Forms" Version="3.0.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
+    <PackageReference Include="Prism.Unity.Forms" Version="7.2.0.1422" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.8.0.1269" />
+    <PackageReference Include="ZXing.Net.Mobile" Version="2.4.1" />
+    <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mobile.Core\Mobile.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v8.1\Mono.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Language\AppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Templates\SyncPanelTemplate.xaml.cs">
+      <DependentUpon>SyncPanelTemplate.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="ControlTemplates\CircleButton.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Language\AppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Baby\BabyAppointmentListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Baby\BabyPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Baby\BabyAppointmentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Baby\BabyListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Mother\MotherAppointmentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Mother\MotherAppointmentListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Mother\MotherPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Mother\MotherListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Setting\AboutPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Common\CalendarPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Common\DateTimeSelectionPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Common\DropDownPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Setting\LanguageListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Templates\Loader.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Templates\SyncPanelTemplate.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Common\DiscrepancyPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Common\UserMessagePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Common\SynchronizationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Setting\SettingPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Templates\FloatingButton.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Common\ToolBarItemsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Logic\Delivery\" />
+    <Folder Include="PDF\Report\" />
+    <Folder Include="Services\MotherService\" />
+    <Folder Include="Services\BabyService\" />
+  </ItemGroup>
+
+
+</Project>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<base:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                        xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+                        xmlns:base="clr-namespace:Mobile.Views.Base"
+                        xmlns:i18n="clr-namespace:Mobile;assembly=Mobile"
+                        xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                        prism:ViewModelLocator.AutowireViewModel="True"
+                        x:Class="Mobile.Views.AboutPage"
+                        x:Name="About"
+                        Title="{Binding Title}">
+    <base:CustomContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="DiscriptionLabelStyle">
+                <Setter Property="FontFamily" Value="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value="{StaticResource DefaultFontUnit}"/>
+                <Setter Property="TextColor" Value ="{StaticResource SecondaryFontColor}"/>
+                <Setter Property="HorizontalOptions" Value ="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="Center"/>
+            </Style>
+            <Style TargetType="Label" x:Key="ValueLabelStyle">
+                <Setter Property="FontFamily" Value="{StaticResource BoldFont}"/>
+                <Setter Property="FontSize" Value="{StaticResource LargeFontUnit}"/>
+                <Setter Property="TextColor" Value ="{StaticResource HighlightedFontColor}"/>
+                <Setter Property="HorizontalOptions" Value ="Start"/>
+                <Setter Property="LineBreakMode" Value ="TailTruncation"/>
+                <Setter Property="VerticalOptions" Value ="Center"/>
+            </Style>
+            <Style TargetType="StackLayout" x:Key="ItemContainerStyle">
+                <Setter Property="Orientation" Value="Vertical"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="FillAndExpand"/>
+                <Setter Property="Padding" Value="10"/>
+            </Style>
+        </ResourceDictionary>
+    </base:CustomContentPage.Resources>
+    <AbsoluteLayout HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+        <AbsoluteLayout AbsoluteLayout.LayoutBounds="0,0,1,.5"
+                        AbsoluteLayout.LayoutFlags="All"
+                        BackgroundColor="{StaticResource Primary}">
+            <ffSvg:SvgCachedImage AbsoluteLayout.LayoutBounds="0.5,.3,.5,.4"
+                                  AbsoluteLayout.LayoutFlags="All"
+                                  Source="{Binding AppLogoImage}"
+                                  Aspect="AspectFit"/>
+            <StackLayout AbsoluteLayout.LayoutBounds="0,1,1,.3"
+                         AbsoluteLayout.LayoutFlags="All"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         Spacing="0">
+                <Label Text="{Binding HeaderInformation}"
+                       Style="{StaticResource CustomerNameDisplayStyle}"/>
+                <Label Text="{Binding DetailInformation}"
+                       Style="{StaticResource CustomerDetailDisplayStyle}"/>
+
+            </StackLayout>
+        </AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds="0,1,1,.5"
+                     AbsoluteLayout.LayoutFlags="All"
+                     BackgroundColor="{StaticResource ListViewBackgroundColor}"
+                     Spacing="0">
+            <Frame  VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="5"
+                        Padding="10">
+                <ScrollView>
+                    <Grid  Padding="0,0"
+                          VerticalOptions="Start"
+                          HorizontalOptions="FillAndExpand"
+                          RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="80"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout Grid.Row="0"  
+                                     Style="{StaticResource ItemContainerStyle}">
+                            <Label Text="{i18n:Translate MSG_SET_041}" 
+                                   Style="{StaticResource DiscriptionLabelStyle}"/>
+                            <Label Text="{Binding DeviceModel}"
+                                   Style="{StaticResource ValueLabelStyle}"/>
+                            <BoxView Style="{StaticResource DividerStyle}"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="1"  
+                                     Style="{StaticResource ItemContainerStyle}">
+                            <Label Text="{i18n:Translate MSG_SET_042}" 
+                                   Style="{StaticResource DiscriptionLabelStyle}"/>
+                            <Label Text="{Binding OsVersion}"
+                                   Style="{StaticResource ValueLabelStyle}"/>
+                            <BoxView Style="{StaticResource DividerStyle}"/>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="2"  
+                                     Style="{StaticResource ItemContainerStyle}">
+                            <Label Text="{i18n:Translate MSG_SET_043}" 
+                                   Style="{StaticResource DiscriptionLabelStyle}"/>
+                            <Label Text="{Binding UniqueId}"
+                                   Style="{StaticResource ValueLabelStyle}"/>
+                            <BoxView Style="{StaticResource DividerStyle}"/>
+                        </StackLayout>
+                    </Grid>
+                </ScrollView>
+            </Frame>
+        </StackLayout>
+    </AbsoluteLayout>
+</base:CustomContentPage>

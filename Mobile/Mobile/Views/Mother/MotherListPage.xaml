@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<base:ScanPage
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:base="clr-namespace:Mobile.Views.Base"
+             xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:templates="clr-namespace:Mobile.Views.Templates"
+             xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:local="clr-namespace:Mobile.Models.Map"
+             xmlns:i18n="clr-namespace:Mobile;assembly=Mobile"
+             xmlns:controls="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
+             x:Class="Mobile.Views.MotherListPage"             
+             Title="{Binding Title}"
+             x:Name="MotherList">
+    <base:ScanPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button" x:Key="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource GreenColor}"/>
+                <Setter Property="TextColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+            </Style>
+        </ResourceDictionary>
+    </base:ScanPage.Resources>
+
+    <AbsoluteLayout HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand">
+
+        <StackLayout AbsoluteLayout.LayoutFlags="All"
+                     AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                     Padding="0,0,0,5">
+
+            <Grid VerticalOptions="FillAndExpand"
+                  HorizontalOptions="FillAndExpand"
+                  RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="0"
+                             Spacing="0" >
+                    <controls:SegmentedControl x:Name="SegControl" TintColor="#0AE0AA" SelectedSegment="0" ValueChanged="OnTabValueChanged">
+                        <controls:SegmentedControl.Children>
+                            <controls:SegmentedControlOption Text="{i18n:Translate LBL_LIST_VIEW}" />
+                            <controls:SegmentedControlOption Text="{i18n:Translate LBL_MAP_VIEW}"  />
+                        </controls:SegmentedControl.Children>
+                    </controls:SegmentedControl>
+                </StackLayout>
+
+                <StackLayout Grid.Row="1"
+                             Spacing="0" >
+
+                    <local:CustomMap BindingContextChanged="OnBindingContextChanged"
+                             x:Name="customMap" 
+                             MapType="Street" 
+                             WidthRequest="100" 
+                             HeightRequest="100"
+                             IsVisible="{Binding IsListView, Converter={StaticResource InverseBoolConverter}}">
+                    </local:CustomMap>
+
+                    <!--IsPullToRefreshEnabled="True" IsRefreshing="{Binding IsRefreshing}"-->
+                    <ListView ItemsSource="{Binding Items}"
+                      SelectedItem="{Binding SelectedDeliveryOrder}"
+                      ItemTapped="OnCustomerTapped"
+                      RefreshCommand="{Binding RefreshCommand}"
+                      HasUnevenRows="False"
+                      RowHeight="100"
+                      Style="{StaticResource ListViewStyle}"
+                      IsVisible="{Binding IsListView}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame Style="{StaticResource ListFrameStyle}">
+                                        <Grid Padding="10,10"
+                                      ColumnSpacing="10"
+                                      HorizontalOptions="FillAndExpand"
+                                      VerticalOptions="FillAndExpand">
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="{StaticResource PrimaryImageColumnWidth}"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="{StaticResource ForwardArrowImageColumnWidth}"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <ffSvg:SvgCachedImage Source="{Binding Image}"
+                                                          Grid.Row="0"
+                                                          Grid.Column="0"
+                                                          HeightRequest="{StaticResource PrimaryImageHeightAndWidth}"
+                                                          WidthRequest ="{StaticResource PrimaryImageHeightAndWidth}"/>
+
+                                            <Grid Grid.Row="0"
+                                          Grid.Column="1"
+                                          RowSpacing="0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="2*"/>
+                                                    <RowDefinition Height="*"/>
+                                                </Grid.RowDefinitions>
+
+                                                <Label Grid.Row="0"
+                                               Text="{Binding FullName}"
+                                               Style="{StaticResource ListPrimaryTextStyle}"/>
+                                                <StackLayout Grid.Row="1"
+                                                     Spacing="2"
+                                                     Orientation="Horizontal">
+                                                    <Label Text="{i18n:Translate LBL_PREP_999}"  
+                                                   Style="{StaticResource ListSecondaryTextStyle}"/>
+                                                    <Label Text="{Binding Nic}"
+                                                   Style="{StaticResource ListSecondaryValueStyle}"/>
+                                                </StackLayout>
+                                                <StackLayout Grid.Row="2"
+                                                     Spacing="2"
+                                                     Orientation="Horizontal">
+                                                    <Label Text="{i18n:Translate LBL_PREP_001}"  
+                                                   Style="{StaticResource ListSecondaryTextStyle}"/>
+                                                    <Label Text="{Binding NextAppointmentDate}"
+                                                   Style="{StaticResource ListSecondaryValueStyle}"/>
+                                                </StackLayout>
+                                            </Grid>
+
+                                            <ffSvg:SvgCachedImage Source="{Binding Path= BindingContext.ForwardArrowImage, Source={x:Reference Name=MotherList}}"
+                                                          Grid.Row="0"
+                                                          Grid.Column="2"
+                                                          HeightRequest="{StaticResource ForwardArrowHeightAndWidth}"
+                                                          WidthRequest="{StaticResource ForwardArrowHeightAndWidth}"/>
+                                        </Grid>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                        <ListView.Behaviors>
+                            <b:EventToCommandBehavior EventName="ItemTapped" 
+                                              Command="{Binding ItemTappedCommand}"
+                                              EventArgsParameterPath="Item" />
+                        </ListView.Behaviors>
+                    </ListView>
+                </StackLayout>
+            </Grid >
+        </StackLayout>
+        <templates:FloatingButton />
+    </AbsoluteLayout>
+</base:ScanPage>

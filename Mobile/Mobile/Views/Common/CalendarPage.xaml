@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+              xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Mobile.Views.CalendarPage">
+    <pages:PopupPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="ValueStyle">
+                <Setter Property="FontSize" Value="{StaticResource ExtraLargeFontUnit}"/>
+                <Setter Property="FontFamily" Value="{StaticResource BoldFont}"/>
+                <Setter Property="TextColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="LineBreakMode" Value ="HeadTruncation"/>
+                <Setter Property="VerticalTextAlignment" Value ="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value ="Start"/>
+                <Setter Property="VerticalOptions" Value ="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value ="CenterAndExpand"/>
+                <Setter Property="BackgroundColor" Value ="{StaticResource GreenColor}"/>
+            </Style>
+            <Style TargetType="Button" x:Key="YearButtonStyle">
+                <Setter Property="WidthRequest" Value="60"/>
+                <Setter Property="HeightRequest" Value="60"/>
+                <Setter Property="BorderRadius" Value="30"/>
+                <Setter Property="AbsoluteLayout.LayoutFlags" Value="PositionProportional"/>
+                <Setter Property="AbsoluteLayout.LayoutBounds" Value=".95, .95, AutoSize, AutoSize"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource GreenColor}"/>
+                <Setter Property="BorderColor" Value="{StaticResource WhiteColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+                <Setter Property="BorderWidth" Value ="1"/>
+            </Style>
+            <Style TargetType="Button" x:Key="KeyPadButtonStyle">
+                <Setter Property="FontFamily" Value="{StaticResource SemiBoldFont}"/>
+                <Setter Property="FontSize" Value="{StaticResource LargeFontUnit}"/>
+                <Setter Property="TextColor" Value ="{StaticResource PrimaryFontColor}"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="FillAndExpand"/>
+                <Setter Property="BackgroundColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="BorderColor" Value ="{StaticResource EntryBorderColor}"/>
+                <Setter Property="BorderRadius" Value ="0"/>
+                <Setter Property="BorderWidth" Value ="1"/>
+            </Style>
+        </ResourceDictionary>
+    </pages:PopupPage.Resources>
+
+    <AbsoluteLayout>
+        <Frame IsClippedToBounds="True"
+               Padding="0"
+               Margin="0"
+               AbsoluteLayout.LayoutBounds=".5,.5,.8,.5"
+               AbsoluteLayout.LayoutFlags="All">
+            <Grid HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand"
+                  RowSpacing="0">
+                <StackLayout Grid.Row="0" 
+                             Margin="5,5,5,5"
+                             Padding="5,10,5,10" 
+                             BackgroundColor="{StaticResource GreenColor}">
+                    <Grid ColumnSpacing="5" RowSpacing="5">
+                        <Button Grid.Row="0" Grid.Column="0" 
+                                Text="-5"   
+                                Style="{StaticResource YearButtonStyle}"
+                                Command="{Binding FiveYearChangeCommand}"
+                                CommandParameter="-5" />
+                        <Button Grid.Row="0" Grid.Column="1" 
+                                Text="&lt;"   
+                                 Style="{StaticResource YearButtonStyle}"
+                                Command="{Binding FiveYearChangeCommand}"
+                                CommandParameter="-1" />
+                        <Label Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2"
+                            Text="{Binding Year}"
+                            Style="{StaticResource ValueStyle}"/>
+                        <Button Grid.Row="0" Grid.Column="4" 
+                                Text="&gt;"   
+                                 Style="{StaticResource YearButtonStyle}"
+                                Command="{Binding FiveYearChangeCommand}"
+                                CommandParameter="+1" />
+                        <Button Grid.Row="0" Grid.Column="5" 
+                                Text="+5"  
+                                Style="{StaticResource YearButtonStyle}"
+                                Command="{Binding FiveYearChangeCommand}"
+                                CommandParameter="+5" />
+                    </Grid>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.RowSpan="3" Padding="5">
+                    <Grid ColumnSpacing="5" RowSpacing="5">
+                        <Button Text="JAN"
+                            Grid.Row="0" Grid.Column="0" 
+                            Style="{StaticResource KeyPadButtonStyle}"
+                            Command="{Binding MonthPressCommand}"
+                            CommandParameter="01" />
+                        <Button Text="FEB"
+                            Grid.Row="0" Grid.Column="1" 
+                            Style="{StaticResource KeyPadButtonStyle}"
+                            Command="{Binding MonthPressCommand}"
+                            CommandParameter="02" />
+                        <Button Text="MAR"
+                            Grid.Row="0" Grid.Column="2" 
+                            Style="{StaticResource KeyPadButtonStyle}"
+                            Command="{Binding MonthPressCommand}"
+                            CommandParameter="03" />
+                        <Button Text="APR"
+                            Grid.Row="1" Grid.Column="0" 
+                            Style="{StaticResource KeyPadButtonStyle}"
+                            Command="{Binding MonthPressCommand}"
+                            CommandParameter="04" />
+                        <Button Text="MAY"
+                            Grid.Row="1" Grid.Column="1" 
+                            Style="{StaticResource KeyPadButtonStyle}"
+                            Command="{Binding MonthPressCommand}"
+                            CommandParameter="05" />
+                        <Button Text="JUN"
+                            Grid.Row="1" Grid.Column="2" 
+                            Style="{StaticResource KeyPadButtonStyle}"
+                            Command="{Binding MonthPressCommand}"
+                            CommandParameter="06" />
+                        <Button Text="JUL"
+                            Grid.Row="2" Grid.Column="0" 
+                            Style="{StaticResource KeyPadButtonStyle}"
+                            Command="{Binding MonthPressCommand}"
+                            CommandParameter="07" />
+                        <Button Text="AUG"
+                            Grid.Row="2" Grid.Column="1" 
+                            Style="{StaticResource KeyPadButtonStyle}"
+                            Command="{Binding MonthPressCommand}"
+                            CommandParameter="08" />
+                        <Button Text="SEP"
+                            Grid.Row="2" Grid.Column="2" 
+                            Style="{StaticResource KeyPadButtonStyle}"
+                            Command="{Binding MonthPressCommand}"
+                            CommandParameter="09" />
+                        <Button Text="OCT"
+                            Grid.Row="3" Grid.Column="0" 
+                            Style="{StaticResource KeyPadButtonStyle}"
+                            Command="{Binding MonthPressCommand}"
+                            CommandParameter="10" />
+                        <Button Text="NOV"
+                            Grid.Row="3" Grid.Column="1" 
+                            Style="{StaticResource KeyPadButtonStyle}"
+                            Command="{Binding MonthPressCommand}"
+                            CommandParameter="11" />
+                        <Button Text="DEC"
+                            Grid.Row="3" Grid.Column="2" 
+                            Style="{StaticResource KeyPadButtonStyle}"
+                            Command="{Binding MonthPressCommand}"
+                            CommandParameter="12" />
+                    </Grid>
+                </StackLayout>
+            </Grid>
+        </Frame>
+    </AbsoluteLayout>
+</pages:PopupPage>

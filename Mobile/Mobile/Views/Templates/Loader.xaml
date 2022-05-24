@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             x:Class="Mobile.Views.Templates.Loader"
+             x:Name="LoadingIndicator">
+  <ContentView.Content>
+        <StackLayout BackgroundColor="#66000000"
+                     Margin="0"
+                     Padding="0"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand">
+            <AbsoluteLayout HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            HeightRequest="200"
+                            WidthRequest="200">
+                <forms:AnimationView AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                     AbsoluteLayout.LayoutFlags="All"
+                                     Animation="Loader2.json"
+                                     Loop="True"
+                                     AutoPlay="True"
+                                     Margin="0"/>
+                <Label  AbsoluteLayout.LayoutBounds=".5,1,.5, 75"
+                        AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"
+                        Text="{Binding ActivityIndicatorMessage}"
+                        HorizontalOptions="CenterAndExpand"
+                        TextColor="White"/>
+            </AbsoluteLayout>
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

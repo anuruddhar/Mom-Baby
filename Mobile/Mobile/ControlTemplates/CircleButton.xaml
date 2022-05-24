@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Button xmlns="http://xamarin.com/schemas/2014/forms" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="Mobile.ControlTemplates.CircleButton"
+        WidthRequest="60"
+        HeightRequest="60"
+        BorderRadius="30"
+        BackgroundColor="{StaticResource GreenColor}"
+        Image="{Binding AssignOnShipmentIcon}"
+        Command="{Binding AssignOnShipmentCommand}"
+        BorderColor="{StaticResource AccentButtonBorderColor}"
+        BorderWidth="1"/>

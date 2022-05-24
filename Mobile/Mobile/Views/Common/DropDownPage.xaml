@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+                 xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+                 xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                 xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 xmlns:i18n="clr-namespace:Mobile;assembly=Mobile"
+                 prism:ViewModelLocator.AutowireViewModel="True"
+                 x:Class="Mobile.Views.DropDownPage"
+                 x:Name="DropDown">
+    <pages:PopupPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="MessageStyle">
+                <Setter Property="TextColor" Value ="{StaticResource PrimaryFontColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource DefaultFontUnit}"/>
+                <Setter Property="HorizontalTextAlignment" Value ="Center"/>
+                <Setter Property="HorizontalOptions" Value ="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="CenterAndExpand"/>
+            </Style>
+        </ResourceDictionary>
+    </pages:PopupPage.Resources>
+
+    <AbsoluteLayout>
+        <Frame IsClippedToBounds="True"
+               Padding="0"
+               Margin="0"
+               AbsoluteLayout.LayoutBounds=".5,.5,.8,.5"
+               AbsoluteLayout.LayoutFlags="All">
+            <Grid HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand"
+                  RowSpacing="0">
+                <StackLayout Grid.Row="0">
+                    <Label Text="{Binding  MessageTitle}"
+                           Style="{StaticResource TitleStyle}"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1"
+                             Grid.RowSpan ="5"
+                             Padding="5">
+                    <ListView ItemsSource="{Binding DataList}"
+                              HasUnevenRows="False"
+                              ItemTapped="OnItemsTapped"
+                              RowHeight="50"
+                              Style="{StaticResource ListViewStyle}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame Style="{StaticResource ListFrameStyle}">
+                                        <Grid Padding="10,10"
+                                              ColumnSpacing="10"
+                                              HorizontalOptions="FillAndExpand"
+                                              VerticalOptions="FillAndExpand">
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="{StaticResource ForwardArrowImageColumnWidth}"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <Label Grid.Row="0"
+                                                   Grid.Column="0"
+                                                   Text="{Binding Value}"
+                                                   Style="{StaticResource ListPrimarySingleTextStyle}"/>
+                                            <ffSvg:SvgCachedImage Source="{Binding Path= BindingContext.ForwardArrowImage, Source={x:Reference Name=DropDown}}"
+                                                                  Grid.Row="0"
+                                                                  Grid.Column="1"
+                                                                  HeightRequest="{StaticResource ForwardArrowHeightAndWidth}"
+                                                                  WidthRequest ="{StaticResource ForwardArrowHeightAndWidth}"/>
+                                        </Grid>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                        <ListView.Behaviors>
+                            <b:EventToCommandBehavior EventName="ItemTapped" 
+                                                      Command="{Binding ItemTappedCommand}"
+                                                      EventArgsParameterPath="Item" />
+                        </ListView.Behaviors>
+                    </ListView>
+                </StackLayout>
+                <StackLayout Grid.Row="6">
+                    <Button Text ="{i18n:Translate BTN_COMM_021}"
+                            Style="{StaticResource WarningButtonStyle}"
+                            Command="{Binding CancelButtonCommand}"/>
+                </StackLayout>
+            </Grid>
+
+        </Frame>
+    </AbsoluteLayout>
+</pages:PopupPage>

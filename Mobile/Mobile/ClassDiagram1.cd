@@ -1,0 +1,1363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Mobile.ControlTemplates.CircleButton" Collapsed="true">
+    <Position X="43" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ControlTemplates\CircleButton.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Data.BabyAppoinmentData.BabyAppoinmentDataService" Collapsed="true">
+    <Position X="53.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\BabyAppoinmentData\BabyAppoinmentDataService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mobile.Data.BabyAppoinmentData.MockBabyAppoinmentDataService" Collapsed="true">
+    <Position X="37.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAgCAAAAAACAAAABAAAOBAAAAAAEAAQAAQAAA=</HashCode>
+      <FileName>Data\BabyAppoinmentData\MockBabyAppoinmentDataService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mobile.BabyDataService" Collapsed="true">
+    <Position X="5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\BabyData\BabyDataService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mobile.PlatformCulture" Collapsed="true">
+    <Position X="39.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAgAAAEAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Language\ILocalize.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.L10n" Collapsed="true">
+    <Position X="53.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAgAAAAAAAIAIAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Language\L10n.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.TranslateExtension" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="43" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Language\TranslateExtension.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Mobile.App" Collapsed="true">
+    <Position X="37.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAABAAAAAAAAAAABAAAAECAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.GlobalSetting" Collapsed="true">
+    <Position X="48.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAFCBAQAsACRCAAQEAAAAAAAAQAAISAQQAAEgGAEBA=</HashCode>
+      <FileName>GlobalSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.InitAutoMapper" Collapsed="true">
+    <Position X="51.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InitAutoMapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Data.MockBabyDataService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="41.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAgCAAAAAACAAAABAIAOBAAAAAAEAAQAAQAAA=</HashCode>
+      <FileName>Data\BabyData\MockBabyDataService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Mobile.Data.ErrorLogDataService" Collapsed="true">
+    <Position X="0.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\ErrorLogData\ErrorLogDataService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mobile.Data.MidwifeDataService" Collapsed="true">
+    <Position X="7.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\MidwifeData\MidwifeDataService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mobile.Data.MockMidwifeDataService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="46.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAgCAAAAAACAAAABAEAMBAAAAAAEAAQAAQAAA=</HashCode>
+      <FileName>Data\MidwifeData\MockMidwifeDataService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Mobile.Data.BabyMockData" Collapsed="true">
+    <Position X="46.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAIAAAAAACAAEAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Data\MockData\BabyMockData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Data.MidwifeMockData" Collapsed="true">
+    <Position X="53.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAEAACAAAAEAAAQAIAAAAACAA=</HashCode>
+      <FileName>Data\MockData\MidwifeMockData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Data.MotherMockData" Collapsed="true">
+    <Position X="39.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAIAAAAAACAAEAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Data\MockData\MotherMockData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Data.UserSettingMockData" Collapsed="true">
+    <Position X="50" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAIAAAAAACAAEAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Data\MockData\UserSettingMockData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Data.MockMotherDataService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="51.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAQAgCAAAAAACAAAABAIAOBAAAAAAEAAQAAQAAA=</HashCode>
+      <FileName>Data\MotherData\MockMotherDataService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Mobile.Data.MotherDataService" Collapsed="true">
+    <Position X="11.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\MotherData\MotherDataService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mobile.Data.MockUserFunctionDataService" BaseTypeListCollapsed="true">
+    <Position X="37.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAgCAAAAAACAAAABAAAMBAAAAAAEAAQAAQCAA=</HashCode>
+      <FileName>Data\UserFunctionData\MockUserFunctionDataService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Mobile.Data.UserFunctionDataService" Collapsed="true">
+    <Position X="2.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\UserFunctionData\UserFunctionDataService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mobile.Data.MockUserSettingDataService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="39.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAQAgCAAAAAACAAAABAAAMBAAAAAAEAAQAAQAAQ=</HashCode>
+      <FileName>Data\UserSettingData\MockUserSettingDataService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Mobile.Data.UserSettingDataService" Collapsed="true">
+    <Position X="9.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\UserSettingData\UserSettingDataService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mobile.Data.DataService&lt;T&gt;" Collapsed="true">
+    <Position X="6" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIIAAAAggCAAAABACAAAABAAAMBAAAAAAEAAQQAQAAA=</HashCode>
+      <FileName>Data\DataService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mobile.Data.LocalDatabase" Collapsed="true">
+    <Position X="43" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAIEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\LocalDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Data.MotherAppoinmentData.MockMotherAppoinmentDataService" Collapsed="true">
+    <Position X="48.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAgCAAAAAACAAAABAAAOBAAAAAAEAAQAAQAAA=</HashCode>
+      <FileName>Data\MotherAppoinmentData\MockMotherAppoinmentDataService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mobile.Data.MotherAppoinmentData.MotherAppoinmentDataService" Collapsed="true">
+    <Position X="44.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\MotherAppoinmentData\MotherAppoinmentDataService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mobile.Events.BluetoothScanEvent" Collapsed="true">
+    <Position X="37.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\BluetoothScanEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Events.CameraScannerContinuousScanEvent" Collapsed="true">
+    <Position X="41.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\CameraScannerContinuousScanEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Events.MenuClickEvent" Collapsed="true">
+    <Position X="46.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\MenuClickEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Events.MessageEventArgs" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="50" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Events\MessageEventArgs.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Mobile.Events.PageTransitionEvent" Collapsed="true">
+    <Position X="46.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\PageTransitionEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Events.SetRootPageEvent" Collapsed="true">
+    <Position X="44.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\SetRootPageEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Events.ToolBarItemEvent" Collapsed="true">
+    <Position X="53.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\ToolBarItemEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Helpers.AppConstant" Collapsed="true">
+    <Position X="39.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\AppConstant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Helpers.CommonFunction" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="44.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAgAEACUAAqwAAAIQAACIwACEQAACIAIAAIAACgAIIA=</HashCode>
+      <FileName>Helpers\CommonFunction.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Mobile.Helpers.ConnectionDecider" Collapsed="true">
+    <Position X="46.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAgAAAAAAASAAAQAACAFAAAQAAAAAAAIAA=</HashCode>
+      <FileName>Helpers\ConnectionDecider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Helpers.Message" Collapsed="true">
+    <Position X="48.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAgQAsJAKCAIEWgCAYIgGbgBgCUCURoggQAEgIBgAI=</HashCode>
+      <FileName>Helpers\Message.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Helpers.Settings" Collapsed="true">
+    <Position X="48.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAQAAoAAAAAAAAAAAAEAAAAAAAQAA=</HashCode>
+      <FileName>Helpers\Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Helpers.Utils" Collapsed="true">
+    <Position X="53.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Helpers\Utils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Language.AppResources" Collapsed="true">
+    <Position X="46.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAgRAsNAKCQIEWgCAZJkGbgBwCUCURoggQAEjIBhII=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GTS.Mobile.Logic.Delivery.DeliveryNotificationSyncLogic" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="37.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAQAAACAAAAAAACQAJAABAAAAIAEAAAYIAAEBAAAAA=</HashCode>
+      <FileName>Logic\Delivery\DeliveryNotificationSyncLogic.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Mobile.Models.Baby.Baby" Collapsed="true">
+    <Position X="18" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACBEAAAEABhIAAAAAIAAAACAQAQBAGAAgAgAFAAAg=</HashCode>
+      <FileName>Models\Baby\Baby.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Baby.BabyDataColumn" Collapsed="true">
+    <Position X="44.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQAAAAAgCAAAAEEAAgAAAIAAAEAIAAAAAADAAAABAAA=</HashCode>
+      <FileName>Models\Baby\Baby.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Baby.BabyAppoinment" Collapsed="true">
+    <Position X="11.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAACAAAAAAAAAAgAAEAAA=</HashCode>
+      <FileName>Models\Baby\BabyAppoinment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Baby.BabyAppoinmentDataColumn" Collapsed="true">
+    <Position X="51.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAIAAAAAgAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Models\Baby\BabyAppoinment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Bluetooth.BluetoothDeviceInfo" Collapsed="true">
+    <Position X="53.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAACAAAIAAAAAAA=</HashCode>
+      <FileName>Models\Bluetooth\BluetoothDeviceInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Common.AppMenuGroup" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="41.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAQAIAAAEAEAAIAAAAAACgIAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Models\Common\AppMenuGroup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Mobile.Models.Common.AppMenuItem" Collapsed="true">
+    <Position X="43" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEBAgICAASAAAAIAAAAEAAAAAgBABiAAECABAEAAQI=</HashCode>
+      <FileName>Models\Common\AppMenuItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Common.AppResult" Collapsed="true">
+    <Position X="48.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAIAQAAAAAIAQCCgAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Models\Common\AppResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Common.CustomToolBarItem" Collapsed="true">
+    <Position X="51.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAACAAAAAABABAAAAAAAAAAIAAAACAIAAAI=</HashCode>
+      <FileName>Models\Common\CustomToolBarItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Common.Discrepancy" Collapsed="true">
+    <Position X="39.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAQAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Common\Discrepancy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Common.DropDown" Collapsed="true">
+    <Position X="41.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Models\Common\DropDown.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Common.ErrorLog" Collapsed="true">
+    <Position X="24.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAQAAAAAAAAAAAAAAAAQAAAAAIAAAAAA=</HashCode>
+      <FileName>Models\Common\ErrorLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Common.ErrorLogDataColumn" Collapsed="true">
+    <Position X="44.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAABAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Models\Common\ErrorLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Common.LanguageModel" Collapsed="true">
+    <Position X="37.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAggAAEAABAAAAAAAAAQBAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Common\LanguageModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Common.SettingPageItem" Collapsed="true">
+    <Position X="46.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAEAAAAhgAAEAABAAAAAAAAAQBCAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Common\SettingPageItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Common.UserSetting" Collapsed="true">
+    <Position X="9" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Models\Common\UserSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Common.UserSettingColumn" Collapsed="true">
+    <Position X="48.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Models\Common\UserSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Login.Midwife" Collapsed="true">
+    <Position X="15.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAACGAAAAgAgAAIIAQAAAAABAACAQAAIAABAAg=</HashCode>
+      <FileName>Models\Login\Midwife.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Login.MidwifeDataColumn" Collapsed="true">
+    <Position X="51.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgBAAAAAAAIACAAAAAAkAIAAAACABIAAEBAAA=</HashCode>
+      <FileName>Models\Login\Midwife.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Login.UserFunction" Collapsed="true">
+    <Position X="22.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAQAABAAAAAA=</HashCode>
+      <FileName>Models\Login\UserFunction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Login.UserFunctionDataColumn" Collapsed="true">
+    <Position X="44.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAACACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Login\UserFunction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Map.CustomMap" Collapsed="true">
+    <Position X="48.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Map\CustomMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Map.CustomPin" Collapsed="true">
+    <Position X="50" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Models\Map\CustomPin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Mother.Mother" Collapsed="true">
+    <Position X="20.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiAABEAAAGABgIAAgAAIAAAACAQARBAGAQgAIAFAAAg=</HashCode>
+      <FileName>Models\Mother\Mother.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Mother.MotherDataColumn" Collapsed="true">
+    <Position X="37.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAgCAABAEECAACAAIAAAEAIAAAACADAAAEBAAI=</HashCode>
+      <FileName>Models\Mother\Mother.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Mother.MotherAppoinment" Collapsed="true">
+    <Position X="13.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAEAAAABAAAAAAAAAAAAACAIAAAAAAAAEAAEAAA=</HashCode>
+      <FileName>Models\Mother\MotherAppoinment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Mother.MotherAppoinmentDataColumn" Collapsed="true">
+    <Position X="43" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CABAAAAAAAAIAAAAQAAQAAAAAAAIAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Models\Mother\MotherAppoinment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.PDF.PDTFile" Collapsed="true">
+    <Position X="6.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\PDF\PDTFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.PDF.PDTFileDataColumn" Collapsed="true">
+    <Position X="37.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\PDF\PDTFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Token.UserToken" Collapsed="true">
+    <Position X="51.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAIAEAAAAQAAAAAAAAAAAgA=</HashCode>
+      <FileName>Models\Token\UserToken.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.AppointmentBase" Collapsed="true">
+    <Position X="12.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAgAAACAAAQAAAAAAAAAAAE=</HashCode>
+      <FileName>Models\AppointmentBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.AppoinmentBaseDataColumn" Collapsed="true">
+    <Position X="44.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAEAAAACAAAAAAAAEAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\AppointmentBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.AuditBase" Collapsed="true">
+    <Position X="19.25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAIAAAAAAAAAAIAAAAQAAAAAAAA=</HashCode>
+      <FileName>Models\AuditBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.AuditBaseDataColumn" Collapsed="true">
+    <Position X="50" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAgAAAAAAAAAAAAAABAAAAEAAAAAAAA=</HashCode>
+      <FileName>Models\AuditBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.Base" Collapsed="true">
+    <Position X="15.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Base.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.BaseDataColumn" Collapsed="true">
+    <Position X="51.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Base.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Models.SearchBase" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="43" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAgBAAQAAAAAAAAAACQAABA=</HashCode>
+      <FileName>Models\SearchBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Mobile.PDF.PdfSharpCore.PdfSharpCoreGenerator" Collapsed="true">
+    <Position X="53.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIQAAABAgAABgAIACAAAAAAAkAACAAAAFAACAAA=</HashCode>
+      <FileName>PDF\PdfSharpCore\PdfSharpCoreGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.PDF.PdfSharpCore.ReportPDFSharpCoreBase" Collapsed="true">
+    <Position X="41.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAQEAAAAAAABAAAAAAAAAQAAEAAAAABgBQACQgU=</HashCode>
+      <FileName>PDF\PdfSharpCore\ReportPDFSharpCoreBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.PDF.PdfImage" Collapsed="true">
+    <Position X="48.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAQAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PDF\PdfImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.PDF.PdfParameter" Collapsed="true">
+    <Position X="51.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgMAIAAEAAGAkIABIggQDABAIgAgAYEAgQjgEAIAAAA=</HashCode>
+      <FileName>PDF\PdfParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.PDF.PdfPaperProperties" Collapsed="true">
+    <Position X="50" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>xDQBMAgIAAQEBIBASoEAAIAAACAABChgAGRDQAgAAAA=</HashCode>
+      <FileName>PDF\PdfParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Services.BabyAppoinmentService.BabyAppoinmentService" Collapsed="true">
+    <Position X="15.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\BabyAppoinmentService\BabyAppoinmentService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mobile.Services.BabyAppoinmentService.MockBabyAppoinmentService" Collapsed="true">
+    <Position X="39.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\BabyAppoinmentService\MockBabyAppoinmentService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mobile.Services.BabyService" Collapsed="true">
+    <Position X="19.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\BabyService\BabyService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mobile.Services.MockBabyService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="43" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\BabyService\MockBabyService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Mobile.Services.LoginService" Collapsed="true">
+    <Position X="22" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\LoginService\LoginService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mobile.Services.MockLoginService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="44.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\LoginService\MockLoginService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Mobile.Services.MockMotherService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="53.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\MotherService\MockMotherService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Mobile.Services.MotherService" Collapsed="true">
+    <Position X="24.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\MotherService\MotherService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mobile.Services.MockUserSettingService" BaseTypeListCollapsed="true">
+    <Position X="41.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAEA=</HashCode>
+      <FileName>Services\UserSettingService\MockUserSettingService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Mobile.Services.UserSettingService" Collapsed="true">
+    <Position X="17.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAEA=</HashCode>
+      <FileName>Services\UserSettingService\UserSettingService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mobile.Services.BaseService" Collapsed="true">
+    <Position X="19.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAQAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\BaseService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Services.MotherAppoinmentService.MockMotherAppoinmentService" Collapsed="true">
+    <Position X="50" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\MotherAppoinmentService\MockMotherAppoinmentService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mobile.Services.MotherAppoinmentService.MotherAppoinmentService" Collapsed="true">
+    <Position X="46.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\MotherAppoinmentService\MotherAppoinmentService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mobile.Services.OpenUrl.OpenUrlService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="44.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Services\OpenUrl\OpenUrlService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Mobile.ViewModels.BabyAppointmentListPageViewModel" Collapsed="true">
+    <Position X="39.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAggAxCQCIAQKAAAQBIRAAgAABAACAgYEAgAk=</HashCode>
+      <FileName>ViewModels\Baby\BabyAppointmentListPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.BabyAppointmentPageViewModel" Collapsed="true">
+    <Position X="43" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Baby\BabyAppointmentPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.BabyListPageViewModel" Collapsed="true">
+    <Position X="21.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAggAxCQCIAQKAAAQBIRAAgAABAACAgYEAgAk=</HashCode>
+      <FileName>ViewModels\Baby\BabyListPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.BabyPageViewModel" Collapsed="true">
+    <Position X="50" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Baby\BabyPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.PopupBaseViewModel" Collapsed="true">
+    <Position X="28.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Base\PopupBaseViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.ViewModelBase" Collapsed="true">
+    <Position X="18.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>WIiFEwBMWo7QCEgAsIEQOISRO/hRag4YlHGiAqEAoAA=</HashCode>
+      <FileName>ViewModels\Base\ViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mobile.ViewModels.CalendarPageViewModel" Collapsed="true">
+    <Position X="24" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAABAAABAAAAAAAAAIBAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Common\CalendarPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.DateTimeSelectionPageViewModel" Collapsed="true">
+    <Position X="3.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAQAAAggAAABAACAAABAAAAAAABACAAAAQAAQA=</HashCode>
+      <FileName>ViewModels\Common\DateTimeSelectionPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.DiscrepancyPageViewModel" Collapsed="true">
+    <Position X="8.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAgCAEAEIAAAACAAAhAAABARAQAAABAJACAACAAAA=</HashCode>
+      <FileName>ViewModels\Common\DiscrepancyPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.DropDownPageViewModel" Collapsed="true">
+    <Position X="26.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAACAAAACAAIAAAAAAAAABAEAAgAAEAAAAAAQQAIA=</HashCode>
+      <FileName>ViewModels\Common\DropDownPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.HomePageViewModel" Collapsed="true">
+    <Position X="15" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASAR8YgDgMhQEsMIUABAkBAAYhAAAQMKBAWZQVEgEAA=</HashCode>
+      <FileName>ViewModels\Common\HomePageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.LoginPageViewModel" Collapsed="true">
+    <Position X="19.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAhAQkgQBABAgAAAMAgAACAAgpAKBQoQQAGAEAA=</HashCode>
+      <FileName>ViewModels\Common\LoginPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.SynchronizationPageViewModel" Collapsed="true">
+    <Position X="28.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAYAAMQAIAAAQEABACAAAEABAAAAAAIUEBJAcBAQAAA=</HashCode>
+      <FileName>ViewModels\Common\SynchronizationPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.ToolBarItemsPageViewModel" Collapsed="true">
+    <Position X="30.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAGAAAAAgCAAAAAAAAAABABAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Common\ToolBarItemsPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.TransitionPageViewModel" Collapsed="true">
+    <Position X="41.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Common\TransitionPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.UserMessagePageViewModel" Collapsed="true">
+    <Position X="33" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAgCAAAECEIAQDAACmIBAFAFACAAIAEAAAIAIQAAA=</HashCode>
+      <FileName>ViewModels\Common\UserMessagePageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.MotherAppointmentListPageViewModel" Collapsed="true">
+    <Position X="50" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAggAxCQCIAQIAAAQBIRAAgAABAACAgYEAgAk=</HashCode>
+      <FileName>ViewModels\Mother\MotherAppointmentListPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.MotherAppointmentPageViewModel" Collapsed="true">
+    <Position X="53.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Mother\MotherAppointmentPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.MotherListPageViewModel" Collapsed="true">
+    <Position X="35.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAggAxCQCIAQIAAAQBIRAAgAABAACAgYEAgAk=</HashCode>
+      <FileName>ViewModels\Mother\MotherListPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.MotherPageViewModel" Collapsed="true">
+    <Position X="43" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\Mother\MotherPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.AboutPageViewModel" Collapsed="true">
+    <Position X="1.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAEAAAAAAgACAAAAAQBQAAAAAEBAAAIIQEAQAA=</HashCode>
+      <FileName>ViewModels\Setting\AboutPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.LanguageListPageViewModel" Collapsed="true">
+    <Position X="6" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAgAAAIAAAABACAAgAABAAAAAACAAAA=</HashCode>
+      <FileName>ViewModels\Setting\LanguageListPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.SettingPageViewModel" Collapsed="true">
+    <Position X="10.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIACAAAAAAAAAAEAAAAAAAABAGAAgAERAACAAAGAACA=</HashCode>
+      <FileName>ViewModels\Setting\SettingPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.ArrivalTimeSelectPageViewModel" Collapsed="true">
+    <Position X="12.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAggAAIAAAQAAAIBBACAAAAAAEAAAgAAgQA=</HashCode>
+      <FileName>ViewModels\ArrivalTimeSelectPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.ViewModels.SignaturePageViewModel" Collapsed="true">
+    <Position X="17.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MCAAPARAUAVACCAIAQBBgADFAAIIgDCAghSEAAlWgAM=</HashCode>
+      <FileName>ViewModels\SignaturePageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.BabyAppointmentListPage" Collapsed="true">
+    <Position X="37.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAIAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Baby\BabyAppointmentListPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.BabyAppointmentPage" Collapsed="true">
+    <Position X="41.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Baby\BabyAppointmentPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.BabyListPage">
+    <Position X="3" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAIAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Baby\BabyListPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.BabyPage" Collapsed="true">
+    <Position X="48.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Baby\BabyPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.MotherAppointmentPage" Collapsed="true">
+    <Position X="51.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Mother\MotherAppointmentPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.CalendarPage" Collapsed="true">
+    <Position X="39.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Common\CalendarPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.DateTimeSelectionPage" Collapsed="true">
+    <Position X="53.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Common\DateTimeSelectionPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.DiscrepancyPage" Collapsed="true">
+    <Position X="14.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Common\DiscrepancyPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.DropDownPage" Collapsed="true">
+    <Position X="43" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Views\Common\DropDownPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.HomePage" Collapsed="true">
+    <Position X="50" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAIAAIAAABAIAAAAEAAAAAAEBAASAAAAAAoABwAA=</HashCode>
+      <FileName>Views\Common\HomePage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.LoginPage" Collapsed="true">
+    <Position X="44.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Common\LoginPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.SynchronizationPage" Collapsed="true">
+    <Position X="50" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Common\SynchronizationPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.ToolBarItemsPage" Collapsed="true">
+    <Position X="37.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Common\ToolBarItemsPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.UserMessagePage" Collapsed="true">
+    <Position X="46.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Common\UserMessagePage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.MotherAppointmentListPage" Collapsed="true">
+    <Position X="48.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAIAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Mother\MotherAppointmentListPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.MotherListPage">
+    <Position X="0.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAIAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Mother\MotherListPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.MotherPage" Collapsed="true">
+    <Position X="41.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Mother\MotherPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.AboutPage" Collapsed="true">
+    <Position X="5.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Setting\AboutPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.LanguageListPage" Collapsed="true">
+    <Position X="7.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Setting\LanguageListPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.SettingPage" Collapsed="true">
+    <Position X="9.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Setting\SettingPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.ArrivalTimeSelectPage" Collapsed="true">
+    <Position X="12" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\ArrivalTimeSelectPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.SignaturePage" Collapsed="true">
+    <Position X="16.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\SignaturePage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.Base.CustomContentPage" Collapsed="true">
+    <Position X="8.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAABAAAAAAAACAAEAAAAAAAIAAAAIAAAAA=</HashCode>
+      <FileName>Views\Base\CustomContentPage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Mobile.Views.Base.ScanPage">
+    <Position X="1.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Base\ScanPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.Base.TransitionNavigationPage" Collapsed="true">
+    <Position X="39.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Base\TransitionNavigationPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.Templates.FloatingButton" Collapsed="true">
+    <Position X="46.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Templates\FloatingButton.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.Templates.Loader" Collapsed="true">
+    <Position X="39.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Templates\Loader.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.Templates.LoadingIndicator" Collapsed="true">
+    <Position X="41.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Templates\LoadingIndicator.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mobile.Views.Templates.SyncPanelTemplate" Collapsed="true">
+    <Position X="51.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\Templates\SyncPanelTemplate.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Mobile.Bluetooth.IBluetoothDevice" Collapsed="true">
+    <Position X="43" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQCAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\IBluetoothDevice.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Data.BabyAppoinmentData.IBabyAppoinmentDataService" Collapsed="true">
+    <Position X="6" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\BabyAppoinmentData\IBabyAppoinmentDataService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.ILocalize" Collapsed="true">
+    <Position X="53.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Language\ILocalize.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Data.IBabyDataService">
+    <Position X="20" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\BabyData\IBabyDataService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Data.IDataService&lt;T&gt;" Collapsed="true">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAgAAAAAAACAAAABAAAMBAAAAAAEAAQAAQAAA=</HashCode>
+      <FileName>Data\Base\IDataService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Data.IErrorLogDataService" Collapsed="true">
+    <Position X="8.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\ErrorLogData\IErrorLogDataService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Data.IMidwifeDataService" Collapsed="true">
+    <Position X="10.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\MidwifeData\IMidwifeDataService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Data.IMotherDataService">
+    <Position X="17.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\MotherData\IMotherDataService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Data.IPDTFileDataService">
+    <Position X="0.75" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\PDF\IPDTFileDataService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Data.IUserFunctionDataService" Collapsed="true">
+    <Position X="3.25" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\UserFunctionData\IUserFunctionDataService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Data.IUserSettingDataService" Collapsed="true">
+    <Position X="12.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\UserSettingData\IUserSettingDataService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Data.MotherAppoinmentData.IMotherAppoinmentDataService">
+    <Position X="15" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\MotherAppoinmentData\IMotherAppoinmentDataService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Events.IMessageEventArgs" Collapsed="true">
+    <Position X="39.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Events\IMessageEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Helpers.ICloseApp" Collapsed="true">
+    <Position X="44.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Helpers\ICloseApp.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Helpers.ICommonFunction" Collapsed="true">
+    <Position X="46.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAACQAAigAAAIAAAAIQAAEAAACAAAAAAAACgAAIA=</HashCode>
+      <FileName>Helpers\ICommonFunction.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Helpers.IConnectionDecider" Collapsed="true">
+    <Position X="48.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAQAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Helpers\IConnectionDecider.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Helpers.IFileHelper" Collapsed="true">
+    <Position X="50" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAQIIAAABAIBAAiAAAAlAAAEIKAAQAAEAAAAAI=</HashCode>
+      <FileName>Helpers\IFileHelper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Helpers.ILoadingPageService" Collapsed="true">
+    <Position X="51.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Helpers\ILoadingPageService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Helpers.INavigationActionBarConfig" Collapsed="true">
+    <Position X="44.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\INavigationActionBarConfig.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Logic.ISyncLogic" Collapsed="true">
+    <Position X="51.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAABAAAAIAAAAAIIAAAAAAAAA=</HashCode>
+      <FileName>Logic\Common\ISyncLogic.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Models.Abstract.IAuditInfo" Collapsed="true">
+    <Position X="37.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Abstract\IAuditInfo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Models.Abstract.IQueryStringConverter" Collapsed="true">
+    <Position X="48.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Abstract\IQueryStringConverter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Models.Abstract.IResultObject" Collapsed="true">
+    <Position X="50" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Abstract\IResultObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Services.BabyAppoinmentService.IBabyAppoinmentService" Collapsed="true">
+    <Position X="39.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\BabyAppoinmentService\IBabyAppoinmentService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Services.IBabyService" Collapsed="true">
+    <Position X="41.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\BabyService\IBabyService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Services.ILoginService" Collapsed="true">
+    <Position X="37.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\LoginService\ILoginService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Services.IMotherService" Collapsed="true">
+    <Position X="43" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\MotherService\IMotherService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Services.IUserSettingService" Collapsed="true">
+    <Position X="53.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAEA=</HashCode>
+      <FileName>Services\UserSettingService\IUserSettingService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Services.MotherAppoinmentService.IMotherAppoinmentService" Collapsed="true">
+    <Position X="41.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\MotherAppoinmentService\IMotherAppoinmentService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Mobile.Services.OpenUrl.IOpenUrlService" Collapsed="true">
+    <Position X="46.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Services\OpenUrl\IOpenUrlService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Mobile.Enum.TransitionType" Collapsed="true">
+    <Position X="44.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAIBLAEAAAAAAAAAAAAAAAEAAQA=</HashCode>
+      <FileName>Enum\Enum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Mobile.Enum.MessageType" Collapsed="true">
+    <Position X="39.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAQAAACAAABCAAAAAAAAEAAAAIAAAAAA=</HashCode>
+      <FileName>Enum\Enum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Mobile.Enum.ConnectionSelection" Collapsed="true">
+    <Position X="37.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAQAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Enum\Enum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Mobile.Enum.ProcessStatus" Collapsed="true">
+    <Position X="41.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAQAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Enum\Enum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Mobile.Enum.Satisfaction" Collapsed="true">
+    <Position X="43" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAACAgAAAAAAAAAAAAEEAA=</HashCode>
+      <FileName>Enum\Enum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="Mobile.Logic.UpdateEventHandler" Collapsed="true">
+    <Position X="37.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logic\Common\ISyncLogic.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

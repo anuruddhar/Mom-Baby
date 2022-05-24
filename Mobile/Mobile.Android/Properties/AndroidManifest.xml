@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" package="com.mombaby.uat" android:label="Mom&amp;Baby" android:icon="@mipmap/ic_launcher" android:debuggable="false" android:versionCode="1" android:installLocation="internalOnly" android:versionName="1.0.0">
+	<uses-sdk android:minSdkVersion="22" android:maxSdkVersion="28" android:targetSdkVersion="28" />
+	<application android:name="android.support.multidex.MultiDexApplication" tools:replace="android:label, android:icon, android:debuggable">
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAPSoMR2yqa86cOI8Yq4IVlmS0l9RlY3FQ" />
+	</application>
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<uses-permission android:name="com.honeywell.decode.permission.DECODE" />
+	<!--GPS Tracking-->
+	<uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES" />
+	<!--Map Tracking-->
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<!--Email-->
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-feature android:name="android.hardware.bluetooth_le" android:required="true" />
+</manifest>

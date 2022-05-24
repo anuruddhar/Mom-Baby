@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<base:CustomContentPage
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:base="clr-namespace:Mobile.Views.Base"
+             xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Mobile.Views.DiscrepancyPage"
+             Title="{Binding Title}">
+    <base:CustomContentPage.Resources>
+        <ResourceDictionary>
+
+        </ResourceDictionary>
+    </base:CustomContentPage.Resources>
+    <StackLayout HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand"
+                 Spacing="0"
+                 BackgroundColor="{StaticResource ListViewBackgroundColor}">
+
+        <StackLayout HorizontalOptions="FillAndExpand"
+                     VerticalOptions="Fill"
+                     HeightRequest="100"
+                     BackgroundColor="{StaticResource WarningColor}">
+            <Label Text="{Binding DiscrepancyMessage}"
+                       Style="{StaticResource DiscrepancyMessageStyle}"
+                       VerticalTextAlignment="Center"/>
+        </StackLayout>
+
+        <StackLayout VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand">
+            <ListView ItemsSource="{Binding Discrepancies}"
+                  HasUnevenRows="False"
+                  RowHeight="80"
+                  ItemTapped="OnDiscrepancyTapped"
+                  Style="{StaticResource ListViewStyle}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame Style="{StaticResource ListFrameStyle}">
+                                <Grid Padding="10,10"
+                                  ColumnSpacing="10"
+                                  HorizontalOptions="FillAndExpand"
+                                  VerticalOptions="FillAndExpand">
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="{StaticResource PrimaryImageColumnWidth}"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <ffSvg:SvgCachedImage Source="{Binding DiscrepancyStatusImage}"
+                                                      Grid.Row="0"
+                                                      Grid.Column="0"
+                                                      HeightRequest="{StaticResource PrimaryImageHeightAndWidth}"
+                                                      WidthRequest ="{StaticResource PrimaryImageHeightAndWidth}"/>
+                                    <StackLayout Grid.Row="0"
+                                                 Grid.Column="1"
+                                                 HorizontalOptions="FillAndExpand"
+                                                 VerticalOptions="CenterAndExpand"
+                                                 Spacing="0">
+                                        <Label  Text="{Binding BarcodeNo}"
+                                                Style="{StaticResource ListPrimaryTextStyle}"/>
+                                        <Label  Text="{Binding Descr1}"
+                                                Style="{StaticResource ListSecondaryValueStyle}"/>
+                                        <Label  Text="{Binding Descr2}"
+                                                Style="{StaticResource ListSecondaryValueStyle}"/>
+                                    </StackLayout>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+        <StackLayout VerticalOptions="EndAndExpand"
+                     HorizontalOptions="FillAndExpand"
+                     HeightRequest="50"
+                     Orientation="Horizontal"
+                     Spacing="0">
+            <Button Style="{StaticResource CustomActionButton}"
+                    Image="{Binding CloseButtonIcon}"
+                    Command="{Binding CancelItemCommand}"
+                    IsVisible="{Binding IsConfirmation}"/>
+            <Button Style="{StaticResource CustomActionButton}"
+                    Image="{Binding ConfirmIcon}"
+                    Command="{Binding ConfirmCommand}"/>
+        </StackLayout>
+
+    </StackLayout>
+</base:CustomContentPage>

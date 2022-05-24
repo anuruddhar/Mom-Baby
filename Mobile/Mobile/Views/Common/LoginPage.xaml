@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:controls="clr-namespace:Mobile.Core.Controls;assembly=Mobile.Core"
+             xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             x:Class="Mobile.Views.LoginPage"
+             xmlns:i18n="clr-namespace:Mobile;assembly=Mobile"
+             BackgroundImage="{Binding BackgroundImage}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button" x:Key="LoginButton">
+                <Setter Property="BackgroundColor" Value="{StaticResource GreenColor}"/>
+                <Setter Property="TextColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+            </Style>
+            <!--Entry-->
+            <Style TargetType="controls:ImageEntry" x:Key="LoginEntryStyle">
+                <Setter Property="TextColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="LineColor" Value ="{StaticResource LoginEntryBoderColor}"/>
+                <Setter Property="PlaceholderColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="SwitchStyle">
+                <Setter Property="TextColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center"
+                     HorizontalOptions="FillAndExpand"
+                     AutomationId="trtLoginPage">
+            <Grid VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Frame Grid.Row ="0"
+                       VerticalOptions="CenterAndExpand"
+                       BackgroundColor="#0A82E13b"
+                       Margin="10,4"
+                       OutlineColor="#0A82E13b"
+                       HasShadow="True">
+                    <Grid HorizontalOptions="FillAndExpand"
+                          VerticalOptions="FillAndExpand">
+                        <AbsoluteLayout Grid.Row="0"
+                                        Grid.RowSpan="6">
+                            <!--<StackLayout AbsoluteLayout.LayoutBounds="1,1,200,45"  
+                                         AbsoluteLayout.LayoutFlags="PositionProportional">
+                                <Label Style="{StaticResource VersionLableStyle}"
+                                       Text="{Binding AppVersion}"/>
+                            </StackLayout>-->
+
+                        </AbsoluteLayout>
+                        <controls:ImageEntry Grid.Row="6" 
+                                                 Style="{StaticResource LoginEntryStyle}"
+                                                 Image= "{Binding UserIcon}"
+                                                 Placeholder="{i18n:Translate LBL_LOGI_001}" 
+                                                 Keyboard="Email" 
+                                                 Text="{Binding UserId}"
+                                                 AutomationId="txtUserId"/>
+                        <controls:ImageEntry Grid.Row="7" 
+                                                 Style="{StaticResource LoginEntryStyle}" 
+                                                 Image="{Binding PasswordIcon}" 
+                                                 Placeholder="{i18n:Translate LBL_LOGI_002}" 
+                                                 IsPassword="True" 
+                                                 Text="{Binding Password}"
+                                                 AutomationId="txtPassword"/>
+                        <Button Grid.Row="8"
+                                    Grid.RowSpan="2"
+                                    Text="{i18n:Translate BTN_LOGI_001}"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="FillAndExpand"
+                                    Style="{StaticResource LoginButton}"
+                                    Command="{Binding LoginCommand}"
+                                    AutomationId="btnLogin"/>
+
+                        
+                    </Grid>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

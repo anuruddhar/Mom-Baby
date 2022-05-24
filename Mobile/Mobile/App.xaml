@@ -1,0 +1,645 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Unity;assembly=Prism.Unity.Forms"
+             xmlns:navgation= "clr-namespace:Mobile.Views.Base;assembly=Mobile"
+             xmlns:behaviours= "clr-namespace:Mobile.Core.Behaviors;assembly=Mobile.Core"
+             xmlns:controls="clr-namespace:Mobile.Core.Controls;assembly=Mobile.Core"
+             xmlns:enhancedEntry="clr-namespace:LeoJHarris.FormsPlugin.Abstractions;assembly=LeoJHarris.FormsPlugin.Abstractions"
+             xmlns:core="clr-namespace:Mobile.Core.Converters;assembly=Mobile.Core"
+             xmlns:templates="clr-namespace:Mobile.Views.Templates"
+             x:Class="Mobile.App">
+	<Application.Resources>
+        <ResourceDictionary>
+            <!--<ControlTemplate x:Key="Container">
+                <AbsoluteLayout HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand">
+                    <ContentPresenter AbsoluteLayout.LayoutBounds=" 0, 0, 1, 1"
+                                        AbsoluteLayout.LayoutFlags="All"/>
+
+                </AbsoluteLayout>
+            </ControlTemplate>-->
+            
+            <!--Primary-->
+            <Color x:Key="Primary">#0b82e1</Color>
+            <Color x:Key="GreenColor">#0ae0aa</Color>
+            <Color x:Key="PrimaryFontColor">#474747</Color>
+            <!--Secondary-->
+            <Color x:Key="Secondary">#08cbee</Color>
+            <Color x:Key="SecondaryFontColor">#8e8e8e</Color>
+            <Color x:Key="HighlightedFontColor">#1a476c</Color>
+            <!--Colors-->
+            <Color x:Key="RedColor">#f76a74</Color>
+            <Color x:Key="WarningColor">#ffae00</Color>
+            <Color x:Key="SecondaryWarningColor">#ffb414</Color>
+            <Color x:Key="WhiteColor">#ffffff</Color>
+            <Color x:Key="BlackColor">#000000</Color>
+            <Color x:Key="AshColor">#F1F5F8</Color>
+            <Color x:Key="GreyColor">#d8dbdd</Color>
+            <Color x:Key="LightGreyColor">#F4F6F9</Color>
+            <Color x:Key="YellowColor">#ffde00</Color><!--NII-->
+            <Color x:Key="OrangeColor">#ffae00</Color> <!--Unplanned Product Color-->
+            <Color x:Key="InitializationThemeColor">#0DBB67</Color>
+            <Color x:Key="ProductionThemeColor">#E02574</Color>
+            <Color x:Key="PreparationThemeColor">#E45858</Color>
+            <Color x:Key="DistributionThemeColor">#127BCC</Color>
+            <Color x:Key="InventoryThemeColor">#12B6CC</Color>
+
+            <Color x:Key="AccentButtonBorderColor">#0cd6a3</Color>
+            <Color x:Key="EntryBorderColor">#b5b9bc</Color>
+            <Color x:Key="BorderColor">#c9d6df</Color>
+            <Color x:Key="LabelHeaderBackGroundColor">#DBE2E7</Color>
+            <Color x:Key="OptionButtonPanelBorderTop">#f0f0f0</Color>
+            <Color x:Key="OptionButtonPanelBackGroundColor">#fafafa</Color>
+
+
+            <Color x:Key="OpenMessageBorderColor">#a9edf9</Color>
+            <Color x:Key="OpenMessageBgColor">#c4f3fb</Color>
+
+            <Color x:Key="InProgressMessageBorderColor">#ffe5ad</Color>
+            <Color x:Key="InProgressMessageBgColor">#fff1d4</Color>
+
+            <Color x:Key="FinishedMessageBorderColor">#a7eedc</Color>
+            <Color x:Key="FinishedMessageBgColor">#c2f6e9</Color>
+
+
+            <!--<Color x:Key="StackLayoutBackgroundColor">#C3C3C3</Color>-->
+            <Color x:Key="LoginEntryBoderColor">#83BBF3</Color>
+            <Color x:Key="ListViewBackgroundColor">#e9edf1</Color>
+            <Color x:Key="ListItemSeperator">#e9edf1</Color>
+            <Color x:Key="CheckBoxPanelDividerColor">#f0f0f0</Color>
+            
+            <Color x:Key="ListItemDescriptionColor">#1DA1F2</Color> <!--Todo Remove-->
+            <Color x:Key="ListItemValueColor">#1B4C70</Color><!--Todo Remove-->
+            
+            
+            <!--Font-->
+            <OnPlatform x:TypeArguments="x:String" x:Key="RegularFont">
+                <On Platform="Android" Value="OpenSans-Regular.ttf#Open Sans" />
+                <On Platform="UWP" Value="/Assets/OpenSans-Regular.ttf#Open Sans" />
+                <On Platform="iOS" Value="OpenSans-Regular" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="BoldFont">
+                <On Platform="Android" Value="OpenSans-Bold.ttf#Open Sans" />
+                <On Platform="UWP" Value="/Assets/OpenSans-Bold.ttf#Open Sans" />
+                <On Platform="iOS" Value="OpenSans-Bold" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ExtraBoldFont">
+                <On Platform="Android" Value="OpenSans-ExtraBold.ttf#Open Sans" />
+                <On Platform="UWP" Value="/Assets/OpenSans-ExtraBold.ttf#Open Sans" />
+                <On Platform="iOS" Value="OpenSans-ExtraBold" />
+            </OnPlatform>
+
+            <OnPlatform x:TypeArguments="x:String" x:Key="SemiBoldFont">
+                <On Platform="Android" Value="OpenSans-SemiBold.ttf#Open Sans" />
+                <On Platform="UWP" Value="/Assets/OpenSans-SemiBold.ttf#Open Sans" />
+                <On Platform="iOS" Value="OpenSans-SemiBold" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="LightFont">
+                <On Platform="Android" Value="OpenSans-Light.ttf#Open Sans" />
+                <On Platform="UWP" Value="/Assets/OpenSans-Light.ttf#Open Sans" />
+                <On Platform="iOS" Value="OpenSans-Light" />
+            </OnPlatform>
+
+            <x:Double x:Key="MicroFontUnit">11</x:Double>
+            <x:Double x:Key="SmallFontUnit">13</x:Double>
+            <x:Double x:Key="MediumFontUnit">15</x:Double>
+            <x:Double x:Key="DefaultFontUnit">15</x:Double>
+            <x:Double x:Key="LargeFontUnit">17</x:Double>
+            <x:Double x:Key="ExtraLargeFontUnit">19</x:Double>
+            <x:Double x:Key="FontUnit25">25</x:Double>
+            <x:Double x:Key="ExtremeLargeFontUnit">35</x:Double>
+
+            <!--Navigation Bar-->
+            <Style TargetType="navgation:TransitionNavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}"/>
+                <Setter Property="BarTextColor" Value="{StaticResource WhiteColor}"/>
+            </Style>
+
+            <!--Button-->
+            <!--Bottom Action Button Style-->
+            <Style TargetType="Button" x:Key="CustomActionButton">
+                <Setter Property="BackgroundColor" Value="{StaticResource WhiteColor}"/>
+                <Setter Property="BorderRadius" Value="0"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            </Style>
+
+            <Style TargetType="Button" x:Key="MessageButtonStyle">
+                <Setter Property="TextColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="BorderRadius" Value ="0"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="FillAndExpand"/>
+            </Style>
+            <Style TargetType="Button" x:Key="InformarionButtonStyle" BasedOn="{StaticResource MessageButtonStyle}">
+                <Setter Property="BackgroundColor" Value="{StaticResource Primary}"/>
+            </Style>
+            <Color x:Key="InformationButtonDiverBoxColor">#005ca5</Color>
+            <Style TargetType="Button" x:Key="SucessButtonStyle" BasedOn="{StaticResource MessageButtonStyle}">
+                <Setter Property="BackgroundColor" Value="{StaticResource GreenColor}"/>
+            </Style>
+            <Style TargetType="Button" x:Key="WarningButtonStyle" BasedOn="{StaticResource MessageButtonStyle}">
+                <Setter Property="BackgroundColor" Value="{StaticResource WarningColor}"/>
+            </Style>
+            <Style TargetType="Button" x:Key="ErrorButtonStyle" BasedOn="{StaticResource MessageButtonStyle}">
+                <Setter Property="BackgroundColor" Value="{StaticResource RedColor}"/>
+            </Style>
+
+
+            <!--List Veiw and Item Styles-->
+            <x:Double x:Key="PrimaryImageHeightAndWidth">30</x:Double>
+            <x:Double x:Key="ToolbarImageHeightAndWidth">25</x:Double>
+            <x:Double x:Key="ForwardArrowHeightAndWidth">15</x:Double>
+            <x:Double x:Key="FillingStatusImageHeightAndWidth">15</x:Double>
+            <x:Double x:Key="PrimaryImageColumnWidth">40</x:Double>
+            <x:Double x:Key="FillingStatusImageColumnWidth">30</x:Double>
+            <x:Double x:Key="ForwardArrowImageColumnWidth">20</x:Double>
+            <x:Double x:Key="ToolbarImageHeightColumnWidth">25</x:Double>
+            
+            <Style TargetType="ListView" x:Key="ListViewStyle">
+                <Setter Property="SeparatorColor" Value="{StaticResource ListItemSeperator}"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource ListViewBackgroundColor}"/>
+            </Style>
+
+            <Style TargetType="Frame" x:Key="ListFrameStyle">
+                <Setter Property="Padding" Value="0,0"/>
+                <Setter Property="Margin" Value="5,5,5,0"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="ListSubMenuStyle">
+                <Setter Property="TextColor" Value="{StaticResource HighlightedFontColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource SemiBoldFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource DefaultFontUnit}"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="LineBreakMode" Value ="TailTruncation"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="ListDisabledSubMenuStyle">
+                <Setter Property="TextColor" Value="{StaticResource SecondaryFontColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource LargeFontUnit}"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="LineBreakMode" Value ="TailTruncation"/>
+            </Style>
+            
+            <Style TargetType="Label" x:Key="ListHighlightedNumberStyle">
+                <Setter Property="TextColor" Value="{StaticResource HighlightedFontColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource BoldFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource MediumFontUnit}"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="LineBreakMode" Value ="TailTruncation"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="ListLargeBoldStyle">
+                <Setter Property="TextColor" Value="{StaticResource PrimaryFontColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource SemiBoldFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource LargeFontUnit}"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="LineBreakMode" Value ="TailTruncation"/>
+            </Style>
+            
+            <Style TargetType="Label" x:Key="ListPrimaryTextStyle">
+                <Setter Property="TextColor" Value="{StaticResource PrimaryFontColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource SemiBoldFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource SmallFontUnit}"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="LineBreakMode" Value ="TailTruncation"/>
+            </Style>
+            <Style TargetType="Label" x:Key="ListPrimarySingleTextStyle">
+                <Setter Property="TextColor" Value="{StaticResource PrimaryFontColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource SemiBoldFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource DefaultFontUnit}"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="LineBreakMode" Value ="TailTruncation"/>
+            </Style>
+            
+            <Style TargetType="Label" x:Key="ListSecondaryTextStyle">
+                <Setter Property="TextColor" Value="{StaticResource SecondaryFontColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource SmallFontUnit}"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="LineBreakMode" Value ="TailTruncation"/>
+            </Style>
+            <Style TargetType="Label" x:Key="ListSecondaryValueStyle">
+                <Setter Property="TextColor" Value="{StaticResource SecondaryFontColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource SemiBoldFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource SmallFontUnit}"/>
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="LineBreakMode" Value ="TailTruncation"/>
+            </Style>
+
+
+
+            <!--Label-->
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value="{StaticResource DefaultFontUnit}"/>
+                <Setter Property="TextColor" Value ="{StaticResource PrimaryFontColor}"/>
+                <Setter Property="HorizontalOptions" Value ="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="Center"/>
+            </Style>
+            <Style TargetType="Label" x:Key="ScannedItemCountLable">
+                <Setter Property="TextColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource SemiBoldFont}"/>
+                <Setter Property="HorizontalOptions" Value ="Center"/>
+                <Setter Property="FontSize" Value ="{StaticResource ExtremeLargeFontUnit}"/>
+            </Style>
+            <Style TargetType="Label" x:Key="ItemCountLable">
+                <Setter Property="TextColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource SemiBoldFont}"/>
+                <Setter Property="HorizontalOptions" Value ="Center"/>
+                <Setter Property="FontSize" Value ="{StaticResource ExtraLargeFontUnit}"/>
+            </Style>
+            <Style TargetType="Label" x:Key="ItemCountDescriptionLable">
+                <Setter Property="TextColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource LightFont}"/>
+                <Setter Property="HorizontalOptions" Value ="Center"/>
+                <Setter Property="FontSize" Value ="{StaticResource MicroFontUnit}"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="ScannerPageHeaderLable">
+                <Setter Property="TextColor" Value ="{StaticResource BlackColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource DefaultFontUnit}"/>
+                <Setter Property="HorizontalTextAlignment" Value ="Center"/>
+            </Style>
+            <Style TargetType="Label" x:Key="ScannerPageDescriptionLable">
+                <Setter Property="TextColor" Value ="{StaticResource ListItemDescriptionColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource SmallFontUnit}"/>
+                <Setter Property="VerticalOptions" Value ="Center"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+            </Style>
+            <Style TargetType="Label" x:Key="ScannerPageValueLable">
+                <Setter Property="TextColor" Value ="{StaticResource ListItemValueColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource BoldFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource DefaultFontUnit}"/>
+                <Setter Property="VerticalOptions" Value ="Center"/>
+                <Setter Property="HorizontalOptions" Value ="End"/>
+            </Style>
+            <Style TargetType="Label" x:Key="DisplayTextStyle">
+                <Setter Property="TextColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource DefaultFontUnit}"/>
+                <Setter Property="VerticalOptions" Value ="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value ="CenterAndExpand"/>
+                <Setter Property="HorizontalTextAlignment" Value ="Center"/>
+            </Style>
+            <Style TargetType="Label" x:Key="DiscrepancyMessageStyle">
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource LargeFontUnit}"/>
+                <Setter Property="VerticalOptions" Value ="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value ="CenterAndExpand"/>
+                <Setter Property="HorizontalTextAlignment" Value ="Center"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="CustomerNameDisplayStyle"> <!--Used in UnknownCustomer Page and ConsignmentDeliveryOrder Page-->
+                <Setter Property="TextColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="FontSize" Value ="{StaticResource ExtraLargeFontUnit}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource SemiBoldFont}"/>
+                <Setter Property="VerticalOptions" Value ="Start"/>
+                <Setter Property="HorizontalOptions" Value ="CenterAndExpand"/>
+                <Setter Property="HorizontalTextAlignment" Value ="Center"/>
+                <Setter Property="Margin" Value ="30,0"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="CustomerDetailDisplayStyle"> <!--Used in UnknownCustomer Page and ConsignmentDeliveryOrder Page-->
+                <Setter Property="TextColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="FontSize" Value ="{StaticResource DefaultFontUnit}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="VerticalOptions" Value ="StartAndExpand"/>
+                <Setter Property="HorizontalOptions" Value ="CenterAndExpand"/>
+                <Setter Property="HorizontalTextAlignment" Value ="Center"/>
+                <Setter Property="Margin" Value ="10,0"/>
+            </Style>
+            
+            <Style TargetType="Label" x:Key="VersionLableStyle">
+                <Setter Property="TextColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="FontSize" Value ="{StaticResource DefaultFontUnit}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+            </Style>
+
+
+            <Style TargetType="Label" x:Key="FormLabelStyle">
+                <Setter Property="FontFamily" Value="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value="{StaticResource DefaultFontUnit}"/>
+                <Setter Property="TextColor" Value ="{StaticResource PrimaryFontColor}"/>
+                <Setter Property="HorizontalOptions" Value ="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="Center"/>
+            </Style>
+            
+            <Style TargetType="Label" x:Key="TitleMessageStyle">
+                <Setter Property="TextColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource LargeFontUnit}"/>
+                <Setter Property="HorizontalTextAlignment" Value ="Center"/>
+                <Setter Property="HorizontalOptions" Value ="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="CenterAndExpand"/>
+            </Style>
+            
+            <Style TargetType="Label" x:Key="TitleStyle"> <!--Popup Form-->
+                <Setter Property="TextColor" Value ="{StaticResource PrimaryFontColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource SemiBoldFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource LargeFontUnit}"/>
+                <Setter Property="HorizontalOptions" Value ="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="CenterAndExpand"/>
+            </Style>
+
+
+            
+            <!--Horizontal Layout Styles-->
+            <Style TargetType="Label" x:Key="DiscriptionLabelStyle">
+                <Setter Property="FontFamily" Value="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value="{StaticResource DefaultFontUnit}"/>
+                <Setter Property="TextColor" Value ="{StaticResource SecondaryFontColor}"/>
+                <Setter Property="HorizontalOptions" Value ="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="Center"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="ValueLabelStyle">
+                <Setter Property="FontFamily" Value="{StaticResource BoldFont}"/>
+                <Setter Property="FontSize" Value="{StaticResource LargeFontUnit}"/>
+                <Setter Property="TextColor" Value ="{StaticResource HighlightedFontColor}"/>
+                <Setter Property="HorizontalOptions" Value ="End"/>
+                <Setter Property="VerticalOptions" Value ="Center"/>
+            </Style>
+
+            <Style TargetType="BoxView" x:Key="DividerStyle">
+                <Setter Property="BackgroundColor" Value="{StaticResource ListViewBackgroundColor}"/>
+                <Setter Property="HeightRequest" Value="1"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+            </Style>
+            <Style TargetType="StackLayout" x:Key="HorizontalItemContainerStyle">
+                <Setter Property="Orientation" Value="Horizontal"/>
+                <Setter Property="HeightRequest" Value="60"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="Fill"/>
+            </Style>
+            <!--End-->
+
+            <!--Check List Header Style-->
+            <Style TargetType="Label" x:Key="HeaderLableStyle">
+                <Setter Property="FontFamily" Value="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value="{StaticResource ExtraLargeFontUnit}"/>
+                <Setter Property="TextColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="HorizontalOptions" Value ="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="CenterAndExpand"/>
+            </Style>
+            <Style TargetType="Label" x:Key="HeaderOptionButtonLableStyle">
+                <Setter Property="FontFamily" Value="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value="{StaticResource DefaultFontUnit}"/>
+                <Setter Property="TextColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="HorizontalOptions" Value ="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="CenterAndExpand"/>
+            </Style>
+            <Style TargetType="BoxView" x:Key="ListViewDividerStyle">
+                <Setter Property="BackgroundColor" Value="{StaticResource CheckBoxPanelDividerColor}"/>
+                <Setter Property="HeightRequest" Value="1"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+            </Style>
+            <!--End-->
+            
+            <!--Entry-->
+            <Style TargetType="enhancedEntry:EnhancedEntry" x:Key="EntryStyle">
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="BorderColor" Value ="{StaticResource EntryBorderColor}"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+            </Style>
+            <!--CommentEntry-->
+            <Style TargetType="enhancedEntry:EnhancedEntry" x:Key="CommentEntryStyle">
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="BorderColor" Value ="{StaticResource EntryBorderColor}"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+                <Setter Property="HeightRequest"  Value ="75"/>
+            </Style>
+            <!--EntryWithBottomMarginStyle-->
+            <Style TargetType="enhancedEntry:EnhancedEntry" x:Key="EntryWithBottomMarginStyle">
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="BorderColor" Value ="{StaticResource EntryBorderColor}"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+                <Setter Property="Margin" Value ="0, 0, 0, 20"/>
+            </Style>
+            <!--Qty Entry-->
+            <Style TargetType="enhancedEntry:EnhancedEntry" x:Key="QuantityEntryStyle">
+                <Setter Property="FontFamily" Value ="{StaticResource ExtremeLargeFontUnit}"/>
+                <Setter Property="BorderColor" Value ="{StaticResource ListViewBackgroundColor}"/>
+                <Setter Property="BackgroundColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+                <Setter Property="HorizontalTextAlignment" Value ="Center"/>
+                <Setter Property="VerticalOptions" Value ="Center"/>
+            </Style>
+            <!--Date Picker-->
+            <Style TargetType="controls:CustomDatePicker">
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="BorderColor" Value ="{StaticResource EntryBorderColor}"/>
+                <Setter Property="Format" Value ="dd/MM/yyyy"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+            </Style>
+            <!--Time Picker-->
+            <Style TargetType="controls:CustomTimePicker">
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="BorderColor" Value ="{StaticResource EntryBorderColor}"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+            </Style>
+            <!--Extended Entry-->
+            <Style TargetType="controls:ExtendedEntry">
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="BorderColor" Value ="{StaticResource EntryBorderColor}"/>
+                <Setter Property="BorderErrorColor" Value ="{StaticResource RedColor}"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+            </Style>
+
+            <!--Extended Entry with white background-->
+            <Style TargetType="controls:ExtendedEntry" x:Key="EntryWithWhiteBGStyle">
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="BorderColor" Value ="{StaticResource EntryBorderColor}"/>
+                <Setter Property="BorderErrorColor" Value ="{StaticResource RedColor}"/>
+                <Setter Property="BackgroundColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+            </Style>
+            
+            <!--Editor-->
+            <Style TargetType="controls:CustomEditor">
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="BorderColor" Value ="{StaticResource EntryBorderColor}"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+            </Style>
+
+            <!--FrameStyle-->
+            <Style TargetType="Frame" x:Key="FrameStyle">
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="Fill"/>
+                <Setter Property="Margin" Value="10,10,10,10" />
+                <Setter Property="Padding" Value="0,0" />
+            </Style>
+            <!--PanelContainerStyle-->
+            <Style TargetType="StackLayout" x:Key="PanelContainerStyle">
+                <Setter Property="Orientation" Value="Vertical"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="Fill"/>
+                <Setter Property="Spacing" Value="0" />
+            </Style>
+            <!--ItemContainerStyle-->
+            <Style TargetType="StackLayout" x:Key="ItemContainerStyle">
+                <Setter Property="Orientation" Value="Vertical"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="Fill"/>
+                <Setter Property="Padding" Value="5,5"/>
+                <Setter Property="Spacing" Value="5" />
+            </Style>
+            <!--Header Style-->
+            <Style TargetType="StackLayout" x:Key="HeaderStyle">
+                <Setter Property="BackgroundColor" Value="{StaticResource LabelHeaderBackGroundColor}"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="FillAndExpand"/>
+                <Setter Property="Padding" Value="10,10,10,10" />
+            </Style>
+            <!--SyncPanelStyle-->
+            <Style TargetType="StackLayout" x:Key="SyncPanelStyle">
+                <Setter Property="BackgroundColor" Value="{StaticResource WhiteColor}"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="Fill"/>
+                <Setter Property="Padding" Value="0,0,0,0" />
+                <Setter Property="Margin" Value="-15,0"/>
+            </Style>
+
+            <!--HeaderLabelStyle-->
+            <Style TargetType="ContentView" x:Key="HeaderLabelStyle">
+                <Setter Property="BackgroundColor" Value="{StaticResource LabelHeaderBackGroundColor}"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="Fill"/>
+                <Setter Property="Padding" Value="10,10,10,10" />
+                <!--<Setter Property="Margin" Value="-15,0"/>-->
+            </Style>
+            <!--TextLabelStyle-->
+            <Style TargetType="Label" x:Key="TextLabelStyle">
+                <Setter Property="FontFamily" Value="{StaticResource BoldFont}"/>
+                <Setter Property="FontSize" Value="{StaticResource LargeFontUnit}"/>
+                <Setter Property="TextColor" Value ="{StaticResource PrimaryFontColor}"/>
+                <Setter Property="HorizontalOptions" Value ="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="CenterAndExpand"/>
+            </Style>
+
+            <!--Button-->
+            <Style TargetType="Button" x:Key="FormButtonStyle">
+                <Setter Property="FontFamily" Value="{StaticResource SemiBoldFont}"/>
+                <Setter Property="FontSize" Value="{StaticResource DefaultFontUnit}"/>
+                <Setter Property="TextColor" Value ="{StaticResource PrimaryFontColor}"/>
+                <Setter Property="HorizontalOptions" Value ="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="CenterAndExpand"/>
+                <Setter Property="HeightRequest" Value ="50"/>
+                <Setter Property="BackgroundColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="BorderColor" Value ="{StaticResource EntryBorderColor}"/>
+                <Setter Property="BorderRadius" Value ="0"/>
+                <Setter Property="BorderWidth" Value ="1"/>
+            </Style>
+
+
+            <!--Animation-->
+            <Style TargetType="View" x:Key="PulsatingView">
+                <Setter Property="behaviours:ViewPulsating.AttachBehavior" Value="true"/>
+            </Style>
+            
+            <!--Converters-->
+            <core:InverseBoolConverter x:Key="InverseBoolConverter"/>
+            <core:DecimalToShortStringConverter x:Key="DecimalToShortStringConverter"/>
+
+
+            <!--Start of Home Page Styles-->
+            <Style TargetType="Label" x:Key="WelcomeLable">
+                <Setter Property="TextColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource SmallFontUnit}"/>
+                <Setter Property="HorizontalOptions" Value ="Center"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="UsernameLable">
+                <Setter Property="TextColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource BoldFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource LargeFontUnit}"/>
+                <Setter Property="HorizontalOptions" Value ="Center"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="HeaderDescriptionLabel">
+                <Setter Property="TextColor" Value ="{StaticResource PrimaryFontColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource BoldFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource DefaultFontUnit}"/>
+                <Setter Property="HorizontalOptions" Value ="Start"/>
+            </Style>
+            <Style TargetType="Label" x:Key="DetailLabel">
+                <Setter Property="TextColor" Value ="{StaticResource SecondaryFontColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource SmallFontUnit}"/>
+                <Setter Property="HorizontalOptions" Value ="Start"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="SlideMenuLabel">
+                <Setter Property="TextColor" Value ="{StaticResource SecondaryFontColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource SmallFontUnit}"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="FloatingMenuLabel">
+                <Setter Property="TextColor" Value ="{StaticResource Primary}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource DefaultFontUnit}"/>
+            </Style>
+            <Style TargetType="SearchBar" x:Key="SearchBarStyle">
+                <Setter Property="TextColor" Value ="{StaticResource WhiteColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource DefaultFontUnit}"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="MainMenuSyle">
+                <Setter Property="TextColor" Value ="{StaticResource PrimaryFontColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource SemiBoldFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource LargeFontUnit}"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="SubMenuSyle">
+                <Setter Property="TextColor" Value ="{StaticResource SecondaryFontColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource DefaultFontUnit}"/>
+            </Style>
+            <Style TargetType="Label" x:Key="InitializationCountLabelStyle">
+                <Setter Property="TextColor" Value ="{StaticResource InitializationThemeColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource ExtraLargeFontUnit}"/>
+            </Style>
+            <Style TargetType="Label" x:Key="FillingCountLabelStyle">
+                <Setter Property="TextColor" Value ="{StaticResource ProductionThemeColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource ExtraLargeFontUnit}"/>
+            </Style>
+            <Style TargetType="Label" x:Key="AssignmentCountLabelStyle">
+                <Setter Property="TextColor" Value ="{StaticResource PreparationThemeColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource ExtraLargeFontUnit}"/>
+            </Style>
+            <Style TargetType="Label" x:Key="DeliveryCountLabelStyle">
+                <Setter Property="TextColor" Value ="{StaticResource DistributionThemeColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource ExtraLargeFontUnit}"/>
+            </Style>
+            <Style TargetType="Label" x:Key="SortingCountLabelStyle">
+                <Setter Property="TextColor" Value ="{StaticResource InventoryThemeColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource ExtraLargeFontUnit}"/>
+            </Style>
+            <!--End of Home Page Styles-->
+        </ResourceDictionary>
+
+    </Application.Resources>
+</prism:PrismApplication>

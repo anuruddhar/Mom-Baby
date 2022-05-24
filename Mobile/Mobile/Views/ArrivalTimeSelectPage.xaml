@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<base:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                        xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                        xmlns:base="clr-namespace:Mobile.Views.Base"
+                        xmlns:i18n="clr-namespace:Mobile;assembly=Mobile"
+                        xmlns:enhancedEntry="clr-namespace:LeoJHarris.FormsPlugin.Abstractions;assembly=LeoJHarris.FormsPlugin.Abstractions"
+                        xmlns:templates="clr-namespace:Mobile.Views.Templates"
+                        prism:ViewModelLocator.AutowireViewModel="True"
+                        x:Class="Mobile.Views.ArrivalTimeSelectPage"
+                        Title="{Binding Title}">
+    <base:CustomContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="NumberLableStyle">
+                <Setter Property="TextColor" Value ="{StaticResource HighlightedFontColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource SemiBoldFont}"/>
+                <Setter Property="FontSize" Value ="50"/>
+                <Setter Property="HorizontalOptions" Value ="CenterAndExpand"/>
+                <Setter Property="HorizontalTextAlignment" Value ="Center"/>
+                <Setter Property="VerticalOptions" Value ="CenterAndExpand"/>
+            </Style>
+            <Style TargetType="Label" x:Key="DescriptionLableStyle">
+                <Setter Property="TextColor" Value ="{StaticResource SecondaryFontColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource LargeFontUnit}"/>
+                <Setter Property="HorizontalOptions" Value ="CenterAndExpand"/>
+                <Setter Property="HorizontalTextAlignment" Value ="Center"/>
+                <Setter Property="VerticalOptions" Value ="CenterAndExpand"/>
+            </Style>
+        </ResourceDictionary>
+    </base:CustomContentPage.Resources>
+    <AbsoluteLayout VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="{StaticResource ListViewBackgroundColor}">
+        <Grid AbsoluteLayout.LayoutBounds="0,0,1,.6"
+              AbsoluteLayout.LayoutFlags="All"
+              RowSpacing="0"
+              ColumnSpacing="0">
+            <Frame Grid.Row="0"
+                   Grid.Column="0"
+                   Margin="20,20,10,10"
+                   Padding="0">
+                <StackLayout VerticalOptions="CenterAndExpand"
+                             HorizontalOptions="FillAndExpand"
+                             Spacing="0">
+                    <Label Text="15"
+                           Style="{StaticResource NumberLableStyle}"/>
+                    <Label Text="{i18n:Translate BTN_DELV_022}"
+                           Style="{StaticResource DescriptionLableStyle}"/>
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding FifteenMinutesCommand}"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+            <Frame Grid.Row="0"
+                   Grid.Column="1"
+                   Margin="10,20,20,10"
+                   Padding="0">
+                <StackLayout VerticalOptions="CenterAndExpand"
+                             HorizontalOptions="FillAndExpand"
+                             Spacing="0">
+                    <Label Text="30"
+                           Style="{StaticResource NumberLableStyle}"/>
+                    <Label Text="{i18n:Translate BTN_DELV_023}"
+                           Style="{StaticResource DescriptionLableStyle}"/>
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ThirtyMinutesCommand}"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+            <Frame Grid.Row="1"
+                   Grid.Column="0"
+                   Margin="20,10,10,20"
+                   Padding="0">
+                <StackLayout VerticalOptions="CenterAndExpand"
+                             HorizontalOptions="FillAndExpand"
+                             Spacing="0">
+                    <Label Text="45"
+                           Style="{StaticResource NumberLableStyle}"/>
+                    <Label Text="{i18n:Translate BTN_DELV_024}"
+                           Style="{StaticResource DescriptionLableStyle}"/>
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding FourtyFiveMinutesCommand}"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+            <Frame Grid.Row="1"
+                   Grid.Column="1"
+                   Margin="10,10,20,20"
+                   Padding="0">
+                <StackLayout VerticalOptions="CenterAndExpand"
+                             HorizontalOptions="FillAndExpand"
+                             Spacing="0">
+                    <Label Text="1"
+                           Style="{StaticResource NumberLableStyle}"/>
+                    <Label Text="{i18n:Translate BTN_DELV_025}"
+                           Style="{StaticResource DescriptionLableStyle}"/>
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OneHourCommand}"/>
+                </Frame.GestureRecognizers>
+
+            </Frame>
+        </Grid>
+        <StackLayout AbsoluteLayout.LayoutBounds="1,1,1,.4"
+                     AbsoluteLayout.LayoutFlags="All"
+                     Spacing="0">
+            <StackLayout Orientation="Horizontal"
+                         VerticalOptions="Start"
+                         HorizontalOptions="FillAndExpand"
+                         Spacing="0"
+                         Margin="20,0">
+                <Label Text="{i18n:Translate BTN_DELV_026}"
+                       Style="{StaticResource FormLabelStyle}"/>
+                <Switch x:Name="chkOther" 
+                        IsToggled ="false"/>
+            </StackLayout>
+            <Frame Margin="20,20"
+                   Padding="10"
+                   VerticalOptions="Fill"
+                   HorizontalOptions="FillAndExpand">
+                <enhancedEntry:EnhancedEntry   Text="{Binding Time}"
+                                               Style="{StaticResource EntryStyle}"
+                                               BorderWidth="2"
+                                               Keyboard="Numeric"
+                                               VerticalOptions="Center"
+                                               IsEnabled="{Binding Path= IsToggled, Source={x:Reference Name=chkOther}}"/>
+            </Frame>
+
+        </StackLayout>
+        <templates:FloatingButton />
+    </AbsoluteLayout>
+</base:CustomContentPage>

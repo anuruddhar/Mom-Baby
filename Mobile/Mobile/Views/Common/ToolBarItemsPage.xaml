@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:i18n="clr-namespace:Mobile;assembly=Mobile"
+             xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Mobile.Views.ToolBarItemsPage"
+             CloseWhenBackgroundIsClicked="True">
+    <pages:PopupPage.Resources>
+        <ResourceDictionary>
+
+
+            <Style TargetType="Label" x:Key="TitleStyle">
+                <Setter Property="TextColor" Value ="{StaticResource PrimaryFontColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource SemiBoldFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource LargeFontUnit}"/>
+                <Setter Property="HorizontalOptions" Value ="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="CenterAndExpand"/>
+            </Style>
+
+            <Style TargetType="Label" x:Key="MessageStyle">
+                <Setter Property="TextColor" Value ="{StaticResource PrimaryFontColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource DefaultFontUnit}"/>
+                <Setter Property="HorizontalTextAlignment" Value ="Center"/>
+                <Setter Property="HorizontalOptions" Value ="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="CenterAndExpand"/>
+            </Style>
+        </ResourceDictionary>
+    </pages:PopupPage.Resources>
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+                          PositionIn="Bottom"
+                          PositionOut="Center"
+                          ScaleIn="1"
+                          ScaleOut="0.7"
+                          DurationIn="500"
+            EasingIn="SinIn"/>
+    </pages:PopupPage.Animation>
+    <AbsoluteLayout VerticalOptions="EndAndExpand"
+                    HorizontalOptions="FillAndExpand">
+        <Frame x:Name="frCustomeToolbarItems" 
+               Padding="10"
+               Margin="0"
+               AbsoluteLayout.LayoutBounds="0,1,1,1"
+               AbsoluteLayout.LayoutFlags="All">
+            <StackLayout>
+                <ListView x:Name="lstCustomeToolbarItems"
+                          ItemsSource="{Binding CustomToolBarItems}"
+                          ItemTapped="ListView_ItemTapped"
+                          HasUnevenRows="False"
+                          RowHeight="50"
+                          BackgroundColor="{StaticResource WhiteColor}"
+                          SeparatorColor="{StaticResource ListViewBackgroundColor}"
+                          VerticalOptions="StartAndExpand"
+                          HorizontalOptions="FillAndExpand">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="{StaticResource ToolbarImageHeightColumnWidth}"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <ffSvg:SvgCachedImage Source="{Binding SvgIcon}"
+                                                      Grid.Row="0"
+                                                      Grid.Column="0"
+                                                      HeightRequest="{StaticResource ToolbarImageHeightAndWidth}"
+                                                      WidthRequest ="{StaticResource ToolbarImageHeightAndWidth}"/>
+
+                                    <Label Grid.Row="0"
+                                       Grid.Column="1"
+                                       Text="{Binding Text}"
+                                       Style="{StaticResource ListSubMenuStyle}"
+                                        Margin="5,0"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    <ListView.Behaviors>
+                        <b:EventToCommandBehavior EventName="ItemTapped" 
+                                              Command="{Binding SelectMenuCommand}"
+                                              EventArgsParameterPath="Item" />
+                    </ListView.Behaviors>
+                </ListView>
+                <Button Style="{StaticResource ErrorButtonStyle}"
+                        Text= "{i18n:Translate LBL_DELV_053}"  
+                        Command="{Binding CancelItemCommand}"
+                        VerticalOptions="End"/>
+            </StackLayout>
+        </Frame>
+    </AbsoluteLayout>
+</pages:PopupPage>

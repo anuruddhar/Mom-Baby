@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+                 xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                 xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 xmlns:controls="clr-namespace:Mobile.Core.Controls;assembly=Mobile.Core"
+                 xmlns:i18n="clr-namespace:Mobile;assembly=Mobile"
+                 prism:ViewModelLocator.AutowireViewModel="True"
+                 x:Class="Mobile.Views.DateTimeSelectionPage">
+    <pages:PopupPage.Resources>
+        <ResourceDictionary>
+        </ResourceDictionary>
+    </pages:PopupPage.Resources>
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+                          PositionIn="Bottom"
+                          PositionOut="Center"
+                          ScaleIn="1"
+                          ScaleOut="0.7"
+                          DurationIn="700"
+                          EasingIn="BounceOut"/>
+    </pages:PopupPage.Animation>
+    <AbsoluteLayout >
+        <Frame IsClippedToBounds="True"
+               Padding="0"
+               Margin="0"
+               AbsoluteLayout.LayoutBounds=".5,.5,.8, 250"
+               AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional">
+            <StackLayout HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand">
+                <Label Text="Date Time Selection"
+                       Style="{StaticResource TitleStyle}"
+                       Margin="20,10,20,0"/>
+                <StackLayout Orientation="Horizontal"
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand"
+                             Padding="15,5">
+                    <StackLayout Orientation="Vertical"
+                                 Spacing="10"
+                                 HorizontalOptions="FillAndExpand">
+                        <Label Text="{i18n:Translate CAP_GRD_DATE}"/>
+                        <controls:CustomDatePicker Date="{Binding Date}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical"
+                                     Spacing="10"
+                                     HorizontalOptions="FillAndExpand">
+                        <Label Text="{i18n:Translate CAP_GRD_TIME}"/>
+                        <controls:CustomTimePicker Time ="{Binding Time, Mode=TwoWay}"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <Button Text ="{i18n:Translate BTN_COMM_020}"
+                        Style="{StaticResource SucessButtonStyle}"
+                        Command="{Binding ConfirmButtonCommand}"
+                        HeightRequest="60"
+                        VerticalOptions="Fill"
+                        HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </Frame>
+    </AbsoluteLayout>
+</pages:PopupPage>

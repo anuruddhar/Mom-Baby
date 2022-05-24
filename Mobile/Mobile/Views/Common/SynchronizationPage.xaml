@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:i18n="clr-namespace:Mobile;assembly=Mobile"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    x:Class="Mobile.Views.SynchronizationPage">
+    <pages:PopupPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="MessageStyle">
+                <Setter Property="TextColor" Value ="{StaticResource PrimaryFontColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource DefaultFontUnit}"/>
+                <Setter Property="HorizontalTextAlignment" Value ="Center"/>
+                <Setter Property="HorizontalOptions" Value ="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="CenterAndExpand"/>
+            </Style>
+        </ResourceDictionary>
+    </pages:PopupPage.Resources>
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+                          PositionIn="Bottom"
+                          PositionOut="Center"
+                          ScaleIn="1"
+                          ScaleOut="0.7"
+                          DurationIn="700"
+                          EasingIn="BounceOut"/>
+    </pages:PopupPage.Animation>
+    <AbsoluteLayout >
+        <Frame IsClippedToBounds="True"
+               Padding="0"
+               Margin="0"
+               AbsoluteLayout.LayoutBounds=".5,.5,.8,.5"
+               BorderColor="{StaticResource Primary}"
+               AbsoluteLayout.LayoutFlags="All">
+
+            <StackLayout VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand">
+
+                <!--In Progress-->
+                <Grid VerticalOptions="FillAndExpand"
+                      HorizontalOptions="FillAndExpand"
+                      IsVisible="{Binding DownLoadInProgress}"
+                      RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="100"/>
+                    </Grid.RowDefinitions>
+                    <forms:AnimationView Grid.Row="0"
+                                         Animation="{Binding ProcessIndicationAnimation}"
+                                         Loop="True"
+                                         AutoPlay="True"
+                                         HeightRequest="150"
+                                         WidthRequest="150"
+                                         HorizontalOptions="Center" 
+                                         VerticalOptions="Center"/>
+                    <Label Grid.Row="1"
+                           Text="{Binding Message}"
+                           Style="{StaticResource MessageStyle}"
+                           Margin="10,0"/>
+                </Grid>
+                
+                <!--Sucess-->
+                <Grid VerticalOptions="FillAndExpand"
+                      HorizontalOptions="FillAndExpand"
+                      IsVisible="{Binding DownLoadSucess}"
+                      RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <forms:AnimationView Grid.Row="0"
+                                         Animation="{Binding SucessIndicationAnimation}"
+                                         Loop="True"
+                                         AutoPlay="True"
+                                         HeightRequest="150"
+                                         OnFinish="AnimationView_OnFinish"
+                                         WidthRequest="150"
+                                         HorizontalOptions="CenterAndExpand" 
+                                         VerticalOptions="CenterAndExpand"/>
+                </Grid>
+
+                <!--Failed-->
+                <Grid VerticalOptions="FillAndExpand"
+                      HorizontalOptions="FillAndExpand"
+                      IsVisible="{Binding DownLoadFailed}"
+                      RowSpacing="0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <forms:AnimationView Grid.Row="0"
+                                         Animation="{Binding FailedIndicationAnimation}"
+                                         Loop="True"
+                                         AutoPlay="True"
+                                         HeightRequest="150"
+                                         WidthRequest="150"
+                                         HorizontalOptions="Center" 
+                                         VerticalOptions="Center"/>
+                    <Label Grid.Row="1"
+                           Text="{Binding Message}"
+                           Style="{StaticResource MessageStyle}"
+                           Margin="10,0"/>
+
+                    <Button Grid.Row="2"
+                            Text ="{i18n:Translate BTN_COMM_020}"
+                            Style="{StaticResource ErrorButtonStyle}"
+                            Command="{Binding OkButtonCommand}"/>
+                </Grid>
+            </StackLayout>
+        </Frame>
+    </AbsoluteLayout>
+</pages:PopupPage>

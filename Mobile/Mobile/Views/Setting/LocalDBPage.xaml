@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<base:CustomContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                        xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+                        xmlns:base="clr-namespace:Mobile.Views.Base"
+                        xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                        xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+                        prism:ViewModelLocator.AutowireViewModel="True"
+                        x:Class="Mobile.Views.LocalDBPage"
+                        x:Name="Setting"
+                        Title="{Binding Title}">
+    <base:CustomContentPage.Resources>
+        <ResourceDictionary>
+        </ResourceDictionary>
+    </base:CustomContentPage.Resources>
+    <StackLayout HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand"
+                 BackgroundColor="{StaticResource ListViewBackgroundColor}">
+        <Frame Margin="5"
+               Padding="10,0"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="FillAndExpand">
+            <ListView ItemsSource="{Binding SettingPageItems}"
+                      BackgroundColor="{StaticResource WhiteColor}"
+                      SeparatorColor="{StaticResource ListViewBackgroundColor}"
+                      HasUnevenRows="False"
+                      RowHeight="80"
+                      ItemTapped="OnItemTapped"
+                      Style="{StaticResource ListViewStyle}"
+                      VerticalOptions="FillAndExpand"
+                      HorizontalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10,10"
+                                  ColumnSpacing="10"
+                                  HorizontalOptions="FillAndExpand"
+                                  VerticalOptions="FillAndExpand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="{StaticResource PrimaryImageColumnWidth}"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="{StaticResource ForwardArrowImageColumnWidth}"/>
+                                </Grid.ColumnDefinitions>
+                                <ffSvg:SvgCachedImage Source="{Binding Image}"
+                                                      Grid.Row="0"
+                                                      Grid.Column="0"
+                                                      HeightRequest="{StaticResource PrimaryImageHeightAndWidth}"
+                                                      WidthRequest ="{StaticResource PrimaryImageHeightAndWidth}"/>
+                                <StackLayout Grid.Row="0"
+                                                 Grid.Column="1"
+                                                 HorizontalOptions="FillAndExpand"
+                                                 VerticalOptions="CenterAndExpand"
+                                                 Spacing="0">
+                                    <Label  Text="{Binding Description}"
+                                            Style="{StaticResource ListHighlightedNumberStyle}"/>
+                                    <Label  Text="{Binding Details}"
+                                            Style="{StaticResource ListSecondaryValueStyle}"/>
+                                </StackLayout>
+                                <ffSvg:SvgCachedImage Source="{Binding Path= BindingContext.ForwardArrowImage, Source={x:Reference Name=Setting}}"
+                                                      Grid.Row="0"
+                                                      Grid.Column="2"
+                                                      IsVisible="{Binding IsInvokeOtherPage}"
+                                                      HeightRequest="{StaticResource ForwardArrowHeightAndWidth}"
+                                                      WidthRequest="{StaticResource ForwardArrowHeightAndWidth}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Behaviors>
+                    <b:EventToCommandBehavior EventName="ItemTapped" 
+                                          Command="{Binding ItemTappedCommand}"
+                                          EventArgsParameterPath="Item" />
+                </ListView.Behaviors>
+            </ListView>
+        </Frame>
+    </StackLayout>
+</base:CustomContentPage>

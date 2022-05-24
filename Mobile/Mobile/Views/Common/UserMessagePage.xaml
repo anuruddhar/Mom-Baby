@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                 xmlns:ffSvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+                 xmlns:i18n="clr-namespace:Mobile;assembly=Mobile"
+                 prism:ViewModelLocator.AutowireViewModel="True"
+                 x:Class="Mobile.Views.UserMessagePage">
+    <pages:PopupPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="MessageStyle">
+                <Setter Property="TextColor" Value ="{StaticResource PrimaryFontColor}"/>
+                <Setter Property="FontFamily" Value ="{StaticResource RegularFont}"/>
+                <Setter Property="FontSize" Value ="{StaticResource DefaultFontUnit}"/>
+                <Setter Property="HorizontalTextAlignment" Value ="Center"/>
+                <Setter Property="HorizontalOptions" Value ="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value ="CenterAndExpand"/>
+            </Style>
+        </ResourceDictionary>
+    </pages:PopupPage.Resources>
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+                          PositionIn="Bottom"
+                          PositionOut="Center"
+                          ScaleIn="1"
+                          ScaleOut="0.7"
+                          DurationIn="300"
+                          EasingIn="SpringIn"/>
+    </pages:PopupPage.Animation>
+    <AbsoluteLayout AutomationId="trtUserMessagePage">
+        <Frame IsClippedToBounds="True"
+               Padding="0"
+               Margin="0"
+               AbsoluteLayout.LayoutBounds=".5,.5,.8,.5"
+               AbsoluteLayout.LayoutFlags="All">
+            <Grid HorizontalOptions="FillAndExpand"
+                  VerticalOptions="FillAndExpand"
+                  RowSpacing="0">
+                <StackLayout Grid.Row="0">
+                    <Label Text="{Binding  MessageTitle}"
+                           Style="{StaticResource TitleStyle}"/>
+                </StackLayout>
+                <AbsoluteLayout Grid.Row="1"
+                                Grid.RowSpan="2"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand">
+                    <ffSvg:SvgCachedImage 
+                                          AbsoluteLayout.LayoutBounds=".5,.5,.8,.8"
+                                          AbsoluteLayout.LayoutFlags="All" 
+                                          Source="{Binding MessageImage}"
+                                          Aspect="AspectFit"/>
+                </AbsoluteLayout>
+                <StackLayout Grid.Row="3"
+                             Grid.RowSpan="2"
+                             Padding="20,20">
+                    <Label Text="{Binding  Message}"
+                           Style="{StaticResource MessageStyle}"
+                           AutomationId="lblMessage"/>
+                </StackLayout>
+                <StackLayout Grid.Row="5"
+                             Padding="0,5,0,0"
+                             IsVisible="{Binding IsMessage}"
+                             Spacing="0">
+                    <Button Text ="{i18n:Translate BTN_COMM_020}"
+                            Style="{DynamicResource ButtonStyle}"
+                            IsVisible="{Binding IsShowButton}"
+                            Command="{Binding OkButtonCommand}"
+                            AutomationId="btnOk"/>
+                </StackLayout>
+                <StackLayout Grid.Row="5"
+                             Padding="0,5,0,0"
+                             IsVisible="{Binding IsConfirm}"
+                             Orientation="Horizontal"
+                             Spacing="0">
+                    <Button Text ="{i18n:Translate BTN_COMM_021}"
+                            Style="{DynamicResource ButtonStyle}"
+                            IsVisible="{Binding IsShowButton}"
+                            Command="{Binding CancelButtonCommand}"/>
+                    <BoxView WidthRequest="1"
+                             BackgroundColor="White"
+                             VerticalOptions="FillAndExpand"/>
+                    <Button Text ="{i18n:Translate BTN_COMM_020}"
+                            Style="{DynamicResource ButtonStyle}"
+                            IsVisible="{Binding IsShowButton}"
+                            Command="{Binding ConfirmButtonCommand}"/>
+
+                </StackLayout>
+            </Grid>
+        </Frame>
+    </AbsoluteLayout>
+</pages:PopupPage>
